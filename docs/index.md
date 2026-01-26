@@ -7,10 +7,10 @@
    **[Documentación de la explotación y securización de la vulnerabilidad](analisisVulnerabilidad.md)**
 
 3. Comprobación de los requisitos de Seguridad de una aplicación:  
-   **[Documentación del análisis de la comprobación de los requisitos de seguridad](tests.md)**  
+   **[Documentación del análisis de la comprobación de los requisitos de seguridad](comprobacion.md)**  
 
 4. Reflexión sobre los riesgos de las aplicaciones:  
-   **[Reflexión sobre los riesgos de las aplicaciones desarrolladas, en función de sus características](sandbox.md)**  
+   **[Reflexión sobre los riesgos de las aplicaciones desarrolladas, en función de sus características](comclusiones.md)**  
 
 5. Reflexión:  
    **[Reflexión sobre comparación de la infraestructura de seguridad de los lenguajes](conclusiones.md)**  
