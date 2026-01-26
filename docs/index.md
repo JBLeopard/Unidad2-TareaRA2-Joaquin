@@ -12,9 +12,6 @@
 4. Reflexión sobre los riesgos de las aplicaciones:  
    **[Reflexión sobre los riesgos de las aplicaciones desarrolladas, en función de sus características](comclusiones.md)**  
 
-5. Reflexión:  
-   **[Reflexión sobre comparación de la infraestructura de seguridad de los lenguajes](conclusiones.md)**  
-
 ---
 
 Esta documentación recoge todas las operaciones realizadas durante el desarrollo de la tarea de la Unidad 1 del módulo **Puesta en Producción Segura (PPS)**.
