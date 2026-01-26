@@ -1,16 +1,16 @@
 # Índice
 
-1. Elementos de Python:  
-   **[Documentación del programa](documentacion.md)**
+1. Trazado de vulnerabiliad:  
+   **[Documentación sobre el trazado de la vulnerabilidad](vulnerabilidad.md)**
 
-2. Ejecución y Depuración:  
-   **[Ejecución del programa](ejecucion.md)**
+2. Análisis de vulnerabilidad en máquina vulnerable:  
+   **[Documentación de la explotación y securización de la vulnerabilidad](analisisVulnerabilidad.md)**
 
-3. Pruebas:  
-   **[Pruebas unitarias y corrección del código de la aplicación](tests.md)**  
+3. Comprobación de los requisitos de Seguridad de una aplicación:  
+   **[Documentación del análisis de la comprobación de los requisitos de seguridad](tests.md)**  
 
-4. Ejecución en Sandbox:  
-   **[Ejecución de la aplicación en un entorno controlado](sandbox.md)**  
+4. Reflexión sobre los riesgos de las aplicaciones:  
+   **[Reflexión sobre los riesgos de las aplicaciones desarrolladas, en función de sus características](sandbox.md)**  
 
 5. Reflexión:  
    **[Reflexión sobre comparación de la infraestructura de seguridad de los lenguajes](conclusiones.md)**  
