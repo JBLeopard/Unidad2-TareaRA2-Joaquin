@@ -12,10 +12,10 @@ theme:
 # Menú navegación
 nav:
   - Inicio: index.md
-  - Documentación y prueba del programa: documentacion.md
-  - Realización de los test unitarios de la aplicación: tests.md
-  - Ejecución de la aplicación en un entorno controlado: sandbox.md
-  - Reflexión sobre comparación de la infraestructura de seguridad de los lenguajes: conclusiones.md
+  - Trazado de vulnerabiliad: trazado.md
+  - Análisis de vulnerabilidad en máquina vulnerable: analisis.md
+  - Comprobación de los requisitos de Seguridad de una aplicación: comprobacion.md
+  - Reflexión sobre los riesgos de las aplicaciones: conclusiones.md
 # Carpeta donde están los archivos Markdown
 docs_dir: docs
 # Extensions Markdown
