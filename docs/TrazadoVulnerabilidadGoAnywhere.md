@@ -75,47 +75,59 @@ También podemos ver las versiones de softwate a las que afecta:
 ![NVD 3](./imagenes/9.png)
 ![NVD 4](./imagenes/10.png)
 
-**Código comentado en Visual Studio Code**  
+---
 
-![Comentarios en lavadero.py](./imagenes/1.png)
-![Comentarios en lavadero.py](./imagenes/2.png)
-![Comentarios en lavadero.py](./imagenes/3.png)
-![Comentarios en lavadero.py](./imagenes/4.png)
-![Comentarios en lavadero.py](./imagenes/5.png)
-![Comentarios en lavadero.py](./imagenes/6.png)
-![Comentarios en lavadero.py](./imagenes/7.png)
-![Comentarios en lavadero.py](./imagenes/8.png)
-![Comentarios en lavadero.py](./imagenes/9.png)
-![Comentarios en lavadero.py](./imagenes/10.png)
-![Comentarios en lavadero.py](./imagenes/11.png)
-![Comentarios en lavadero.py](./imagenes/12.png)
-![Comentarios en lavadero.py](./imagenes/13.png)
-![Comentarios en lavadero.py](./imagenes/14.png)
-![Comentarios en lavadero.py](./imagenes/15.png)
+## 1.5 Análisis de la CWE
 
+Desde la NVD se identifican las **debilidades (CWE)** explotadas por la vulnerabilidad.  
+Accedemos a la página oficial de **cwe.mitre.org** para analizar en detalle la debilidad principal.  
+En esta sección se describe:  
+- En qué consiste la debilidad
+- Lenguajes y tecnologías afectadas
+- Posibles mitigaciones
 
+![CWE 1](./imagenes/11.png)
 
-**Archivo lavadero.py (estado final corregido):**  
+Se observa la relación de la debilidad con otras CWE, mostrando jerarquías de debilidades padre e hijas.
 
-[lavadero.py](https://github.com/JBLeopard/Unidad1-TareaRA1-Joaquin/blob/main/src/lavadero.py)
+![CWE 2](./imagenes/12.png)
+
+También una lista de CVE relacionadas.
+
+![CWE 3](./imagenes/13.png)
+
+Patrones de ataque - CAPEC  
+Desde la información de la CWE se accede a los **patrones de ataque (CAPEC)** que pueden explotar esta debilidad.
+
+![CWE 4](./imagenes/14.png)
 
 ---
 
-## 1.2 Documentación mediante Jupyter Notebook (estado inicial lavadero.py)
+## 1.6 Análisis del patrón de ataque CAPEC
 
-Como apoyo adicional, se ha creado un cuaderno Jupyter Notebook donde se explica:
+En la web oficial de **capec.mitre.org** se analiza el patrón de ataque identificado.  
+Se detallan:  
+- Descripción del ataque
+- Flujo de ejecución
+- Requisitos previos
+- Consecuencias
+- Posibles mitigaciones
 
-- Pruebas unitarias de la aplicación
-- Simulación
-
-Este formato facilita una comprensión más visual y didáctica del programa.
-
-**Notebook visualizado en el navegador**  
-
-![Notebook Lavadero](./imagenes/notebook.png)
-
-**Notebook del proyecto:**  
-
-[notebook_lavadero.ipynb](./notebook_lavadero.ipynb)
+![CWE 4](./imagenes/14.png)
 
 ---
+
+## 1.7 Descarga del registro CVE en formato JSON
+
+Finalmente, desde **cve.org** se accede al **registro CVE en formato JSON**, utilizado para el tratamiento automatizado de la información de vulnerabilidades.  
+Este registro contiene información estructurada sobre:  
+- CVE
+- CWE
+- CPE
+- CAPEC
+- Referencias oficiales
+
+[CVE-2024-0204.json](https://github.com/JBLeopard/Unidad1-TareaRA1-Joaquin/blob/main/docs/lCVE-2024-0204.json)
+
+---
+
