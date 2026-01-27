@@ -23,7 +23,8 @@ Se accede a través del navegador y permite configurar distintos niveles de segu
 
 En el primer acceso es necesario crear la base de datos antes de poder comenzar con las pruebas.
 
-![DVWA](./imagenes/1.png)
+![DVWA](./imagenes/16.png)
+![DVWA](./imagenes/17.png)
 
 ---
 
@@ -37,7 +38,8 @@ OWASP Multillidae II es otra aplicación web vulnerable mantenida por OWASP que 
 
 No es necesario usuario ni contraseña para acceder a la aplicación principal.ye servicios adicionales como acceso a bases de datos y servicios LDAP.  
 
-![Multillidae](./imagenes/3.png)
+![Multillidae](./imagenes/18.png)
+![Multillidae](./imagenes/19.png)
 
 ---
 
@@ -51,7 +53,8 @@ Kali Linux se incluye como máquina de apoyo para la realización de pruebas de 
 ```bash
 docker exec -it kali /bin/bash
 ```
-![Kali Linux](./imagenes/4.png)
+![Kali Linux](./imagenes/20.png)
+
 ---
 
 ### 2.4 bWAPP (Buggy Web Application)
