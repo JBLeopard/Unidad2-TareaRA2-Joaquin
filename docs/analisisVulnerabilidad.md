@@ -1,4 +1,4 @@
-# 2. Ejecución y depuración del programa
+# 2. Documentación de la explotación y securización de la vulnerabilidad
 
 En este apartado se describe el proceso de ejecución y depuración de la aplicación utilizando el IDE **Visual Studio Code**, así como los errores detectados durante la ejecución inicial.
 
