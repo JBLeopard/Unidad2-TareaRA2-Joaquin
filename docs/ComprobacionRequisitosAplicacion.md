@@ -1,4 +1,4 @@
-# 3. Pruebas unitarias y corrección del código de la aplicación
+# 3. Documentación del análisis de la comprobación de los requisitos de seguridad
 
 En este apartado se documenta de forma detallada el proceso completo de **ejecución de pruebas unitarias**, **detección de errores**, **análisis de fallos** y **corrección del código** de la aplicación del lavadero.  
 
