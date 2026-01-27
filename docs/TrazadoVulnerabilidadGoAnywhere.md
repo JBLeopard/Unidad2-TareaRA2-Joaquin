@@ -48,9 +48,9 @@ En la información proporcionada por el fabricante se identifica el identificado
 Este identificador permite realizar el seguimiento oficial del fallo de seguridad en las diferentes bases de datos.  
 Accedemos a la página oficial de **cve.org**, donde se muestra la información básica del CVE:
 
-- Descripción de la vulnerabilidad
-- Referencias oficiales
-- Fecha de publicación
+- Descripción de la vulnerabilidad  
+- Referencias oficiales  
+- Fecha de publicación  
 
 ![CVE 1](./imagenes/5.png)
 ![CVE 2](./imagenes/6.png)
@@ -66,7 +66,7 @@ A continuación se consulta la **National Vulnerability Database (NVD)** manteni
 En la NVD se muestra la puntuación **CVSS**, que indica el nivel de riesgo de la vulnerabilidad.
 
 - **Puntuación CVSS:** 9.8 Crítica  
-- **Vector CVSS:** Permite analizar los factores utilizados para calcular la puntuación
+- **Vector CVSS:** Permite analizar los factores utilizados para calcular la puntuación  
 
 ![NVD 2](./imagenes/8.png)
 
@@ -82,9 +82,9 @@ También podemos ver las versiones de softwate a las que afecta:
 Desde la NVD se identifican las **debilidades (CWE)** explotadas por la vulnerabilidad.  
 Accedemos a la página oficial de **cwe.mitre.org** para analizar en detalle la debilidad principal.  
 En esta sección se describe:  
-- En qué consiste la debilidad
-- Lenguajes y tecnologías afectadas
-- Posibles mitigaciones
+- En qué consiste la debilidad  
+- Lenguajes y tecnologías afectadas  
+- Posibles mitigaciones  
 
 ![CWE 1](./imagenes/11.png)
 
@@ -96,8 +96,8 @@ También una lista de CVE relacionadas.
 
 ![CWE 3](./imagenes/13.png)
 
-Patrones de ataque - CAPEC  
-Desde la información de la CWE se accede a los **patrones de ataque (CAPEC)** que pueden explotar esta debilidad.
+Patrones de ataque (CAPEC)  
+Desde la información de la CWE se accede a los **patrones de ataque (CAPEC)** que pueden explotar esta debilidad.  
 
 ![CWE 4](./imagenes/14.png)
 
@@ -107,11 +107,11 @@ Desde la información de la CWE se accede a los **patrones de ataque (CAPEC)** q
 
 En la web oficial de **capec.mitre.org** se analiza el patrón de ataque identificado.  
 Se detallan:  
-- Descripción del ataque
-- Flujo de ejecución
-- Requisitos previos
-- Consecuencias
-- Posibles mitigaciones
+- Descripción del ataque  
+- Flujo de ejecución  
+- Requisitos previos  
+- Consecuencias  
+- Posibles mitigaciones  
 
 ![CWE 4](./imagenes/14.png)
 
@@ -121,11 +121,11 @@ Se detallan:
 
 Finalmente, desde **cve.org** se accede al **registro CVE en formato JSON**, utilizado para el tratamiento automatizado de la información de vulnerabilidades.  
 Este registro contiene información estructurada sobre:  
-- CVE
-- CWE
-- CPE
-- CAPEC
-- Referencias oficiales
+- CVE  
+- CWE  
+- CPE  
+- CAPEC  
+- Referencias oficiales  
 
 [CVE-2024-0204.json](https://github.com/JBLeopard/Unidad1-TareaRA1-Joaquin/blob/main/docs/lCVE-2024-0204.json)
 
