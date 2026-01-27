@@ -22,22 +22,20 @@ Esta documentación recoge todas las operaciones realizadas durante el desarroll
 
 | Archivo | Descripción |
 |---------|-------------|
-| `documentacion.md` | Comentarios en el código y creación notebook. |
-| `ejecucion.md` | Ejecución del código y errores. |
-| `tests.md` | Creación de pruebas y correción del código de la aplicación. |
-| `sandbox.md` | Ejecución en un entorno controlado de la aplicación. |
+| `TrazadoVulnerabilidadGoAnywhere.md` | Comentarios en el código y creación notebook. |
+| `analisisVulnerabilidad.md` | Ejecución del código y errores. |
+| `ComprobacionRequisitosAplicacion.md` | Creación de pruebas y correción del código de la aplicación. |
 | `conclusiones.md` | Reflexión final sobre seguridad en las aplicaciones. |
 
 ---
 
-## Tecnologías utilizadas
+## Software utilizado
 
-| Tecnología | Función |
+| Software | Función |
 |-----------|---------|
-| **Python** | Lenguaje de programación |
-| **Visual Studio Code** | Entorno de Desarrollo Integrado |
-| **Jupyter Notebook** | Entorno de desarrollo interactivo |
-| **Firejail y Firetools** | Motor de aislamiento e interfaz gráfica de aplicaciones |
+| **Navegadores Brave y Firefox** | Lenguaje de programación |
+| **LibreOffice Calc** | Entorno de Desarrollo Integrado |
+| **Docker** | Entorno de desarrollo interactivo |
 
 ---
   
