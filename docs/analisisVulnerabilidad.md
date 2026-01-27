@@ -12,44 +12,56 @@ En esta documentación se proponen los siguientes objetivos:
 
 ## 2.1 DVWA (Damn Vulnerable Web Application)
 
-Durante la primera ejecución, el programa no funcionó correctamente debido a varios errores de implementación.
+DVWA es una aplicación web deliberadamente vulnerable que permite practicar distintos tipos de ataques web, como inyección SQL, XSS, CSRF, entre otros.  
+Se accede a través del navegador y permite configurar distintos niveles de seguridad.  
+**Acceso:**
+- URL: http://localhost:8002
+- Usuario: admin
+- Contraseña: password
 
-**Error mostrado en Visual Studio Code**  
+En el primer acceso es necesario crear la base de datos antes de poder comenzar con las pruebas.
 
-![Error en ejecución](./imagenes/errormainapp.png)
-
----
-
-## 2.2 Errores detectados en la ejecución
-
-### Error 1: Llamada incorrecta a métodos
-
-**Causa:**  
-En el archivo `main_app.py` se realizaban llamadas a métodos inexistentes o con nombres incorrectos (por ejemplo `_hacer_lavado` en lugar de `hacerLavado`).
-
-**Consecuencia:**  
-El programa lanzaba excepciones al iniciar la ejecución.
-
-**Solución aplicada:**  
-He unificado los nombres de los métodos en toda la aplicación, utilizando exclusivamente el método público `hacerLavado()`.
+![DVWA](./imagenes/1.png)
 
 ---
 
-### Error 2: Firma incorrecta de funciones
+### 2.2 OWASP Multillidae II
 
-**Causa:**  
-La función `ejecutarSimulacion()` no recibía correctamente todos los argumentos necesarios.
+OWASP Multillidae II es otra aplicación web vulnerable mantenida por OWASP que permite entrenar en distintos escenarios de ataque.  
+Inclu**Acceso:**
+- URL: http://localhost  
+- PhpMyAdmin: http://localhost:81  
+- PhpLdapAdmin: http://localhost:82  
 
-**Solución aplicada:**  
-He modificado la función para aceptar explícitamente:
-- La instancia del lavadero
-- Las opciones de prelavado, secado y encerado
+No es necesario usuario ni contraseña para acceder a la aplicación principal.ye servicios adicionales como acceso a bases de datos y servicios LDAP.  
 
-**Error corregido tras la modificación**  
-
-![Error solucionado](./imagenes/errormainappsol.png)
+![Multillidae](./imagenes/3.png)
 
 ---
-A pesar de todas las demás pruebas realizadas con marcadores, no he encontrado mas fallos en el código.
+
+### 2.3 Kali Linux
+
+Kali Linux se incluye como máquina de apoyo para la realización de pruebas de seguridad, utilizando herramientas de análisis y test de intrusión sobre el resto de aplicaciones.
+
+![Kali Linux](./imagenes/4.png)
+**Acceso:**
+Kali Linux se utiliza como máquina de apoyo para realizar pruebas de seguridad sobre el resto de aplicaciones.  
+El acceso se realiza mediante terminal, utilizando herramientas de análisis y test de intrusión.  
+```bash docker run -it --name kali kali-linux/kali-rolling /bin/bash```
+
+---
+
+### 2.4 bWAPP (Buggy Web Application)
+
+bWAPP es una aplicación web vulnerable que contiene más de 100 vulnerabilidades diferentes, orientadas al aprendizaje de seguridad web.  
+Incluye vulnerabilidades de inyección, autenticación, gestión de sesiones y validación de entradas, entre otras.  
+
+![bWAPP](./imagenes/2.png)
+**Acceso:**
+- URL: http://localhost:8001
+- Usuario: bee
+- Contraseña: bug
+
+En el primer acceso es necesario crear la base de datos desde la página de instalación antes de poder acceder a la aplicación.
 
 ---
