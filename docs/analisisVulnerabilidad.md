@@ -1,6 +1,6 @@
 # 2. Documentación de la explotación y securización de la vulnerabilidad
 
-En este apartado se describe el proceso de ejecución y depuración de la aplicación utilizando el IDE **Visual Studio Code**, así como los errores detectados durante la ejecución inicial.
+En esta práctica se ha trabajado con un entorno de máquinas deliberadamente vulnerables y se ha realizado un **test de intrusión** explotando una vulnerabilidad de **SQL Injection** en la aplicación bWAPP.
 
 ---
 
