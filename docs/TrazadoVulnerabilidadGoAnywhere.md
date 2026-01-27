@@ -1,4 +1,4 @@
-# 1. Documentación del programa
+# 1. Documentación sobre el trazado de la vulnerabilidad
 
 En este apartado se documenta el código fuente de la aplicación **Lavadero**, cuyo objetivo es simular el funcionamiento de un lavadero de coches automático con distintas opciones de lavado.
 
