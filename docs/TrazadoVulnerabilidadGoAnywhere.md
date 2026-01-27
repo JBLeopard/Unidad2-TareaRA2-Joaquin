@@ -5,6 +5,7 @@ Así pues, se trata de:
 - Conocer las principales listas de información sobre ciberseguridad (CVE, NVD, CWE, CAPEC, etc.).
 - Aprender a realizar el **trazado de una vulnerabilidad** desde una fuente informativa inicial hasta sus patrones de ataque.
 - Analizar el impacto, criticidad y debilidades asociadas a una vulnerabilidad real.  
+
 ![INCIBE 1](./imagenes/1.png)
 ![INCIBE 2](./imagenes/2.png)
 ---
