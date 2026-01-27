@@ -7,13 +7,25 @@ Así pues, se trata de:
 - Aprender a realizar el **trazado de una vulnerabilidad** desde una fuente informativa inicial hasta sus patrones de ataque.
 - Analizar el impacto, criticidad y debilidades asociadas a una vulnerabilidad real.
 
-**Vulnerabilidad reportada en INCIBE**
+**Vulnerabilidad analizada**
+
+- **Producto afectado:** GoAnywhere MFT  
+- **Fabricante:** Fortra  
+- **Tipo:** Omisión de autenticación  
+- **Gravedad:** Crítica
+
+La vulnerabilidad permite a un atacante no autenticado acceder a funcionalidades internas de la aplicación.
+
+---
+
+## 1.1 Inicio del trazado – INCIBE
+
+El trazado comienza a partir de un artículo publicado por INCIBE, donde se informa de una vulnerabilidad crítica que afecta a GoAnywhere MFT.  
+En dicho artículo se describe de forma general el problema y se proporcionan referencias externas para ampliar la información.
 
 ![INCIBE 1](./imagenes/1.png)
 ![INCIBE 2](./imagenes/2.png)
----
 
-## 1.1 Comentarios en el código fuente
 
 Se han añadido comentarios detallados en el archivo `lavadero.py` para explicar:
 
