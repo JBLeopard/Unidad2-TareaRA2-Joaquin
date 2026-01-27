@@ -18,7 +18,7 @@ La vulnerabilidad permite a un atacante no autenticado acceder a funcionalidades
 
 ---
 
-## 1.1 Inicio del trazado – INCIBE
+## 1.1 Inicio del trazado (INCIBE)
 
 El trazado comienza a partir de un artículo publicado por INCIBE, donde se informa de una vulnerabilidad crítica que afecta a GoAnywhere MFT.  
 En dicho artículo se describe de forma general el problema y se proporcionan referencias externas para ampliar la información.
@@ -26,16 +26,32 @@ En dicho artículo se describe de forma general el problema y se proporcionan re
 ![INCIBE 1](./imagenes/1.png)
 ![INCIBE 2](./imagenes/2.png)
 
+---
 
-Se han añadido comentarios detallados en el archivo `lavadero.py` para explicar:
+## 1.2 Web oficial del fabricante (Fortra)
 
-- La finalidad de la clase `Lavadero`
-- El significado de cada constante de fase
-- El comportamiento de los métodos principales (`hacerLavado`, `_cobrar`, `avanzarFase`)
-- Las reglas de negocio impuestas por el enunciado
-- Las decisiones de flujo entre fases
+Desde el artículo de INCIBE se accede a la web oficial del fabricante, donde se publica el aviso de seguridad correspondiente.
 
-Estos comentarios permiten comprender el funcionamiento interno del programa sin necesidad de ejecutar el código.
+En esta página se detallan:
+- La descripción técnica de la vulnerabilidad
+- Las versiones afectadas
+- Las medidas de mitigación y parches disponibles
+
+![FORTRA 1](./imagenes/3.png)
+![FORTRA 2](./imagenes/4.png)
+
+---
+
+## 1.3 Identificación del CVE
+
+En la información proporcionada por el fabricante se identifica el identificador CVE asignado a la vulnerabilidad.
+Este identificador permite realizar el seguimiento oficial del fallo de seguridad en las diferentes bases de datos.
+
+![CVE 1](./imagenes/3.png)
+![CVE 2](./imagenes/4.png)
+
+---
+
 
 **Código comentado en Visual Studio Code**  
 
