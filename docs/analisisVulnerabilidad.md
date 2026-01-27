@@ -49,7 +49,7 @@ Kali Linux se incluye como máquina de apoyo para la realización de pruebas de 
 - Kali Linux se utiliza como máquina de apoyo para realizar pruebas de seguridad sobre el resto de aplicaciones.  
 - El acceso se realiza mediante terminal, utilizando herramientas de análisis y test de intrusión.  
 ```bash
-docker run -it --name kali kali-linux/kali-rolling /bin/bash
+docker exec -it kali /bin/bash
 ```
 ![Kali Linux](./imagenes/4.png)
 ---
