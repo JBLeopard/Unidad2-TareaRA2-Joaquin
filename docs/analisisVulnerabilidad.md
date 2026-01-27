@@ -8,6 +8,8 @@ En esta documentación se proponen los siguientes objetivos:
 - Identificar y explotar una vulnerabilidad de tipo SQL Injection.  
 - Analizar el código fuente responsable de la vulnerabilidad.
 
+Para la realización de esta actividad se han puesto en marcha varios contenedores con docker que forman un entorno de pruebas con aplicaciones web vulnerables.
+
 ---
 
 ## 2.1 DVWA (Damn Vulnerable Web Application)
@@ -43,13 +45,13 @@ No es necesario usuario ni contraseña para acceder a la aplicación principal.y
 
 Kali Linux se incluye como máquina de apoyo para la realización de pruebas de seguridad, utilizando herramientas de análisis y test de intrusión sobre el resto de aplicaciones.
 
-![Kali Linux](./imagenes/4.png)
-**Acceso:**
+**Acceso:**  
 Kali Linux se utiliza como máquina de apoyo para realizar pruebas de seguridad sobre el resto de aplicaciones.  
 El acceso se realiza mediante terminal, utilizando herramientas de análisis y test de intrusión.  
 ```bash
 docker run -it --name kali kali-linux/kali-rolling /bin/bash
 ```
+![Kali Linux](./imagenes/4.png)
 ---
 
 ### 2.4 bWAPP (Buggy Web Application)
@@ -57,7 +59,6 @@ docker run -it --name kali kali-linux/kali-rolling /bin/bash
 bWAPP es una aplicación web vulnerable que contiene más de 100 vulnerabilidades diferentes, orientadas al aprendizaje de seguridad web.  
 Incluye vulnerabilidades de inyección, autenticación, gestión de sesiones y validación de entradas, entre otras.  
 
-![bWAPP](./imagenes/2.png)
 **Acceso:**
 - URL: http://localhost:8001
 - Usuario: bee
@@ -65,4 +66,5 @@ Incluye vulnerabilidades de inyección, autenticación, gestión de sesiones y v
 
 En el primer acceso es necesario crear la base de datos desde la página de instalación antes de poder acceder a la aplicación.
 
+![bWAPP](./imagenes/2.png)
 ---
