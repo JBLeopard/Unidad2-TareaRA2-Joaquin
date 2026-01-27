@@ -2,8 +2,9 @@
 
 En esta documentación se realiza el **trazado completo de una vulnerabilidad**, navegando por las distintas listas y organismos oficiales de ciberseguridad.  
 Así pues, se trata de:  
-- Conocer las principales listas de información sobre ciberseguridad (CVE, NVD, CWE, CAPEC, etc.).
-- Aprender a realizar el **trazado de una vulnerabilidad** desde una fuente informativa inicial hasta sus patrones de ataque.
+
+- Conocer las principales listas de información sobre ciberseguridad (CVE, NVD, CWE, CAPEC, etc.).  
+- Aprender a realizar el **trazado de una vulnerabilidad** desde una fuente informativa inicial hasta sus patrones de ataque.  
 - Analizar el impacto, criticidad y debilidades asociadas a una vulnerabilidad real.  
 
 **Vulnerabilidad reportada en INCIBE**
