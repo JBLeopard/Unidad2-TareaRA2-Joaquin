@@ -4,9 +4,17 @@ Durante el desarrollo de esta tarea se han aplicado y analizado distintas medida
 
 ---
 
-## Seguridad en Python
+## 15. Conclusión
 
-Python es un lenguaje que prioriza la facilidad de uso y la legibilidad, pero no incorpora de forma nativa mecanismos estrictos de aislamiento o control de recursos. Por este motivo, herramientas externas como Firejail o contenedores Docker resultan fundamentales para ejecutar aplicaciones Python de forma segura en entornos productivos.  
+Mediante este trazado se ha podido comprobar cómo la información sobre una vulnerabilidad se encuentra distribuida en diferentes listas y organismos, todos ellos interrelacionados.
+
+Este proceso permite:
+- Evaluar correctamente el riesgo
+- Entender las debilidades explotadas
+- Identificar los patrones de ataque
+- Aplicar medidas de mitigación adecuadas
+
+El trazado completo resulta fundamental para una correcta **puesta en producción segura**.
 
 ---
 
