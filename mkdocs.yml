@@ -14,7 +14,7 @@ nav:
   - Inicio: index.md
   - Trazado de vulnerabiliad: TrazadoVulnerabilidadGoAnywhere.md
   - Análisis de vulnerabilidad en máquina vulnerable: analisisVulnerabilidad.md
-  - Comprobación de los requisitos de Seguridad de una aplicación: comprobacion.md
+  - Comprobación de los requisitos de Seguridad de una aplicación: ComprobacionRequisitosAplicacion.md
   - Reflexión sobre los riesgos de las aplicaciones: conclusiones.md
 # Carpeta donde están los archivos Markdown
 docs_dir: docs
