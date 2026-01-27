@@ -46,8 +46,8 @@ No es necesario usuario ni contraseña para acceder a la aplicación principal.y
 Kali Linux se incluye como máquina de apoyo para la realización de pruebas de seguridad, utilizando herramientas de análisis y test de intrusión sobre el resto de aplicaciones.
 
 **Acceso:**  
-Kali Linux se utiliza como máquina de apoyo para realizar pruebas de seguridad sobre el resto de aplicaciones.  
-El acceso se realiza mediante terminal, utilizando herramientas de análisis y test de intrusión.  
+- Kali Linux se utiliza como máquina de apoyo para realizar pruebas de seguridad sobre el resto de aplicaciones.  
+- El acceso se realiza mediante terminal, utilizando herramientas de análisis y test de intrusión.  
 ```bash
 docker run -it --name kali kali-linux/kali-rolling /bin/bash
 ```
