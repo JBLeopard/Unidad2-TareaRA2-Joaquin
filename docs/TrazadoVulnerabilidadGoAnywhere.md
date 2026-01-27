@@ -20,7 +20,7 @@ Estos comentarios permiten comprender el funcionamiento interno del programa sin
 
 **Código comentado en Visual Studio Code**  
 
-![Comentarios en lavadero.py](./imagenes/1.png)
+[Comentarios en lavadero.py](./imagenes/1.png)
 ![Comentarios en lavadero.py](./imagenes/2.png)
 ![Comentarios en lavadero.py](./imagenes/3.png)
 ![Comentarios en lavadero.py](./imagenes/4.png)
