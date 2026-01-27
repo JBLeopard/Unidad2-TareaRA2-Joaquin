@@ -42,7 +42,7 @@ En esta página se detallan:
 
 ---
 
-## 1.3 Identificación del CVE
+## 1.3 Identificación del CVE y análisis
 
 En la información proporcionada por el fabricante se identifica el identificador CVE asignado a la vulnerabilidad.  
 Este identificador permite realizar el seguimiento oficial del fallo de seguridad en las diferentes bases de datos.  
@@ -52,11 +52,28 @@ Accedemos a la página oficial de **cve.org**, donde se muestra la información 
 - Referencias oficiales
 - Fecha de publicación
 
-![CVE 1](./imagenes/3.png)
-![CVE 2](./imagenes/4.png)
+![CVE 1](./imagenes/5.png)
+![CVE 2](./imagenes/6.png)
 
 ---
 
+## 1.4 Consulta en la NVD (NIST)
+
+A continuación se consulta la **National Vulnerability Database (NVD)** mantenida por el NIST, donde se amplía la información técnica.
+
+![NVD 1](./imagenes/7.png)
+
+En la NVD se muestra la puntuación **CVSS**, que indica el nivel de riesgo de la vulnerabilidad.
+
+- **Puntuación CVSS:** 9.8 Crítica  
+- **Vector CVSS:** Permite analizar los factores utilizados para calcular la puntuación
+
+![NVD 2](./imagenes/8.png)
+
+También podemos ver las versiones de softwate a las que afecta:  
+
+![NVD 3](./imagenes/9.png)
+![NVD 4](./imagenes/10.png)
 
 **Código comentado en Visual Studio Code**  
 
