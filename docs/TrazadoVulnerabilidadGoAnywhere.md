@@ -127,7 +127,7 @@ Este registro contiene información estructurada sobre:
 - CAPEC  
 - Referencias oficiales  
 
-[CVE-2024-0204.json](https://github.com/JBLeopard/Unidad1-TareaRA1-Joaquin/blob/main/docs/lCVE-2024-0204.json)
+[CVE-2024-0204.json](https://github.com/JBLeopard/Unidad2-TareaRA2-Joaquin/blob/main/docs/lCVE-2024-0204.json)
 
 ---
 
