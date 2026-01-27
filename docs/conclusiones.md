@@ -1,4 +1,4 @@
-# 4. Reflexión sobre la infraestructura de seguridad de los lenguajes
+# 4. Reflexión sobre los riesgos de las aplicaciones desarrolladas, en función de sus características
 
 Durante el desarrollo de esta tarea se han aplicado y analizado distintas medidas de seguridad relacionadas con el lenguaje Python y el entorno de ejecución.  
 
