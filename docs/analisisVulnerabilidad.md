@@ -28,7 +28,7 @@ En el primer acceso es necesario crear la base de datos antes de poder comenzar 
 ### 2.2 OWASP Multillidae II
 
 OWASP Multillidae II es otra aplicación web vulnerable mantenida por OWASP que permite entrenar en distintos escenarios de ataque.  
-Inclu**Acceso:**
+**Acceso:**
 - URL: http://localhost  
 - PhpMyAdmin: http://localhost:81  
 - PhpLdapAdmin: http://localhost:82  
