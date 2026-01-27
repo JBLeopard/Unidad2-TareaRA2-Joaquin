@@ -1,8 +1,10 @@
 # 1. Documentación sobre el trazado de la vulnerabilidad
 
-En este apartado se documenta el código fuente de la aplicación **Lavadero**, cuyo objetivo es simular el funcionamiento de un lavadero de coches automático con distintas opciones de lavado.
-
-La documentación se ha realizado siguiendo buenas prácticas de programación, con comentarios claros y explicativos directamente en el código, así como documentación adicional mediante un cuaderno Jupyter.
+En esta documentación se realiza el **trazado completo de una vulnerabilidad**, navegando por las distintas listas y organismos oficiales de ciberseguridad.  
+Así pues, se trata de:  
+- Conocer las principales listas de información sobre ciberseguridad (CVE, NVD, CWE, CAPEC, etc.).
+- Aprender a realizar el **trazado de una vulnerabilidad** desde una fuente informativa inicial hasta sus patrones de ataque.
+- Analizar el impacto, criticidad y debilidades asociadas a una vulnerabilidad real.
 
 ---
 
