@@ -20,7 +20,23 @@ Estos comentarios permiten comprender el funcionamiento interno del programa sin
 
 **Código comentado en Visual Studio Code**  
 
-![Comentarios en lavadero.py](./imagenes/comentarios.png)
+![Comentarios en lavadero.py](./imagenes/1.png)
+![Comentarios en lavadero.py](./imagenes/2.png)
+![Comentarios en lavadero.py](./imagenes/3.png)
+![Comentarios en lavadero.py](./imagenes/4.png)
+![Comentarios en lavadero.py](./imagenes/5.png)
+![Comentarios en lavadero.py](./imagenes/6.png)
+![Comentarios en lavadero.py](./imagenes/7.png)
+![Comentarios en lavadero.py](./imagenes/8.png)
+![Comentarios en lavadero.py](./imagenes/9.png)
+![Comentarios en lavadero.py](./imagenes/10.png)
+![Comentarios en lavadero.py](./imagenes/11.png)
+![Comentarios en lavadero.py](./imagenes/12.png)
+![Comentarios en lavadero.py](./imagenes/13.png)
+![Comentarios en lavadero.py](./imagenes/14.png)
+![Comentarios en lavadero.py](./imagenes/15.png)
+
+
 
 **Archivo lavadero.py (estado final corregido):**  
 
