@@ -1,6 +1,12 @@
 # 2. Documentación de la explotación y securización de la vulnerabilidad
 
-En esta práctica se ha trabajado con un entorno de máquinas deliberadamente vulnerables y se ha realizado un **test de intrusión** explotando una vulnerabilidad de **SQL Injection** en la aplicación bWAPP.
+En esta práctica se ha trabajado con un entorno de máquinas deliberadamente vulnerables y se ha realizado un **test de intrusión** explotando una vulnerabilidad de **SQL Injection** en la aplicación bWAPP.  
+En esta documentación se proponen los siguientes objetivos:  
+
+- Conocer distintos proyectos de máquinas vulnerables para prácticas de seguridad.  
+- Utilizar un entorno controlado para la realización de pruebas de intrusión.  
+- Identificar y explotar una vulnerabilidad de tipo SQL Injection.  
+- Analizar el código fuente responsable de la vulnerabilidad.  
 
 ---
 
