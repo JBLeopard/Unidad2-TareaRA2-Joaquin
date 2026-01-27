@@ -6,7 +6,7 @@ En esta documentación se proponen los siguientes objetivos:
 - Conocer distintos proyectos de máquinas vulnerables para prácticas de seguridad.  
 - Utilizar un entorno controlado para la realización de pruebas de intrusión.  
 - Identificar y explotar una vulnerabilidad de tipo SQL Injection.  
-- Analizar el código fuente responsable de la vulnerabilidad.
+- Analizar el código fuente responsable de la vulnerabilidad.  
 Para la realización de esta actividad se han puesto en marcha varios contenedores que forman un entorno de pruebas con aplicaciones web vulnerables.  
 ---
 
