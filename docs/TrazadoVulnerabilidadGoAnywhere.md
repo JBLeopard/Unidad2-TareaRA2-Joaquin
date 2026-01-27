@@ -33,9 +33,10 @@ En dicho artículo se describe de forma general el problema y se proporcionan re
 Desde el artículo de INCIBE se accede a la web oficial del fabricante, donde se publica el aviso de seguridad correspondiente.
 
 En esta página se detallan:
-- La descripción técnica de la vulnerabilidad
-- Las versiones afectadas
-- Las medidas de mitigación y parches disponibles
+
+- La descripción técnica de la vulnerabilidad  
+- Las versiones afectadas  
+- Las medidas de mitigación y parches disponibles  
 
 ![FORTRA 1](./imagenes/3.png)
 ![FORTRA 2](./imagenes/4.png)
@@ -82,6 +83,7 @@ También podemos ver las versiones de softwate a las que afecta:
 Desde la NVD se identifican las **debilidades (CWE)** explotadas por la vulnerabilidad.  
 Accedemos a la página oficial de **cwe.mitre.org** para analizar en detalle la debilidad principal.  
 En esta sección se describe:  
+
 - En qué consiste la debilidad  
 - Lenguajes y tecnologías afectadas  
 - Posibles mitigaciones  
@@ -107,6 +109,7 @@ Desde la información de la CWE se accede a los **patrones de ataque (CAPEC)** q
 
 En la web oficial de **capec.mitre.org** se analiza el patrón de ataque identificado.  
 Se detallan:  
+
 - Descripción del ataque  
 - Flujo de ejecución  
 - Requisitos previos  
@@ -121,6 +124,7 @@ Se detallan:
 
 Finalmente, desde **cve.org** se accede al **registro CVE en formato JSON**, utilizado para el tratamiento automatizado de la información de vulnerabilidades.  
 Este registro contiene información estructurada sobre:  
+
 - CVE  
 - CWE  
 - CPE  
