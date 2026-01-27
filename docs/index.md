@@ -22,10 +22,10 @@ Esta documentación recoge todas las operaciones realizadas durante el desarroll
 
 | Archivo | Descripción |
 |---------|-------------|
-| `TrazadoVulnerabilidadGoAnywhere.md` | Comentarios en el código y creación notebook. |
-| `analisisVulnerabilidad.md` | Ejecución del código y errores. |
-| `ComprobacionRequisitosAplicacion.md` | Creación de pruebas y correción del código de la aplicación. |
-| `conclusiones.md` | Reflexión final sobre seguridad en las aplicaciones. |
+| `TrazadoVulnerabilidadGoAnywhere.md` | Seguimiento de la vulnerabilidad en GoAnywhere MFT de Fortra. |
+| `analisisVulnerabilidad.md` | Documentación y pruebas de ejecución de código en máquinas vulnerables. |
+| `ComprobacionRequisitosAplicacion.md` | Análisis de la comprobación de los requisitos de seguridad en la app lavadero. |
+| `conclusiones.md` | Reflexión final sobre los riesgos en las aplicaciones. |
 
 ---
 
@@ -33,9 +33,9 @@ Esta documentación recoge todas las operaciones realizadas durante el desarroll
 
 | Software | Función |
 |-----------|---------|
-| **Navegadores Brave y Firefox** | Lenguaje de programación |
-| **LibreOffice Calc** | Entorno de Desarrollo Integrado |
-| **Docker** | Entorno de desarrollo interactivo |
+| **Navegadores Brave y Firefox** | Documentación en análisis y trazado de la vulnerabilidad. |
+| **LibreOffice Calc** | Documentación en la comprobación de requisitos de seguridad de una aplicación. |
+| **Docker** | Ejecución de entorno de máquinas vulnerables. |
 
 ---
   
