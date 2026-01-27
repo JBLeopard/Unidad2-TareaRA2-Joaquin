@@ -1,7 +1,7 @@
 # Índice
 
 1. Trazado de vulnerabiliad:  
-   **[Documentación sobre el trazado de la vulnerabilidad](vulnerabilidad.md)**
+   **[Documentación sobre el trazado de la vulnerabilidad](TrazadoVulnerabilidadGoAnywhere.md)**
 
 2. Análisis de vulnerabilidad en máquina vulnerable:  
    **[Documentación de la explotación y securización de la vulnerabilidad](analisisVulnerabilidad.md)**
