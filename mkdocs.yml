@@ -12,7 +12,7 @@ theme:
 # Menú navegación
 nav:
   - Inicio: index.md
-  - Trazado de vulnerabiliad: trazado.md
+  - Trazado de vulnerabiliad: TrazadoVulnerabilidadGoAnywhere.md
   - Análisis de vulnerabilidad en máquina vulnerable: analisisVulnerabilidad.md
   - Comprobación de los requisitos de Seguridad de una aplicación: comprobacion.md
   - Reflexión sobre los riesgos de las aplicaciones: conclusiones.md
