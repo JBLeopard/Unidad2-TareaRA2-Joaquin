@@ -3,11 +3,9 @@
 En esta documentación se realiza el **trazado completo de una vulnerabilidad**, navegando por las distintas listas y organismos oficiales de ciberseguridad.  
 Así pues, se trata de:  
 
-- La finalidad de la clase `Lavadero`
-- El significado de cada constante de fase
-- El comportamiento de los métodos principales (`hacerLavado`, `_cobrar`, `avanzarFase`)
-- Las reglas de negocio impuestas por el enunciado
-- Las decisiones de flujo entre fases
+- Conocer las principales listas de información sobre ciberseguridad (CVE, NVD, CWE, CAPEC, etc.).
+- Aprender a realizar el **trazado de una vulnerabilidad** desde una fuente informativa inicial hasta sus patrones de ataque.
+- Analizar el impacto, criticidad y debilidades asociadas a una vulnerabilidad real.
 
 **Vulnerabilidad reportada en INCIBE**
 
