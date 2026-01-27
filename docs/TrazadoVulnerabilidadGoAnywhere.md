@@ -44,8 +44,13 @@ En esta página se detallan:
 
 ## 1.3 Identificación del CVE
 
-En la información proporcionada por el fabricante se identifica el identificador CVE asignado a la vulnerabilidad.
-Este identificador permite realizar el seguimiento oficial del fallo de seguridad en las diferentes bases de datos.
+En la información proporcionada por el fabricante se identifica el identificador CVE asignado a la vulnerabilidad.  
+Este identificador permite realizar el seguimiento oficial del fallo de seguridad en las diferentes bases de datos.  
+Accedemos a la página oficial de **cve.org**, donde se muestra la información básica del CVE:
+
+- Descripción de la vulnerabilidad
+- Referencias oficiales
+- Fecha de publicación
 
 ![CVE 1](./imagenes/3.png)
 ![CVE 2](./imagenes/4.png)
