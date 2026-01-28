@@ -53,7 +53,7 @@ Kali Linux se incluye como máquina de apoyo para la realización de pruebas de 
 ```bash
 docker exec -it kali /bin/bash
 ```
-![Kali Linux]/apartado_dos/kali.png)
+![Kali Linux](./imagenes/apartado_dos/kali.png)
 
 ---
 
@@ -70,5 +70,30 @@ Incluye vulnerabilidades de inyección, autenticación, gestión de sesiones y v
 En el primer acceso es necesario crear la base de datos desde la página de instalación antes de poder acceder a la aplicación.
 
 ![bWAPP 1](./imagenes/apartado_dos/bwapp1.png)
+![bWAPP 2](./imagenes/apartado_dos/bwapp2.png)
+![bWAPP 3](./imagenes/apartado_dos/bwapp3.png)
+![bWAPPSQL 1](./imagenes/apartado_dos/bwappsql1.png)
+![bWAPPSQL 2](./imagenes/apartado_dos/bwappsql2.png)
+![bWAPPSQL 3](./imagenes/apartado_dos/bwappsql3.png)
+![bWAPPSQL 4](./imagenes/apartado_dos/bwappsql4.png)
+![bWAPPSQL 5](./imagenes/apartado_dos/bwappsql5.png)
+![bWAPPSQL 6](./imagenes/apartado_dos/bwappsql6.png)
+![bWAPPSQL 7](./imagenes/apartado_dos/bwappsql7.png)
+![bWAPPSQL 8](./imagenes/apartado_dos/bwappsql8.png)
+![bWAPPSQL 9](./imagenes/apartado_dos/bwappsql9.png)
+![bWAPPSQL 10](./imagenes/apartado_dos/bwappsql10.png)
+![bWAPPSQL 11](./imagenes/apartado_dos/bwappsql11.png)
+![bWAPPSQL 12](./imagenes/apartado_dos/bwappsql12.png)
+![bWAPPSQL 12](./imagenes/apartado_dos/bwappsql13.png)
+
+
+
+
+
+
+
+
+
+
 
 ---
