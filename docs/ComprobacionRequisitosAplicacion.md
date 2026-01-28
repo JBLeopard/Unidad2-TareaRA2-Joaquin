@@ -33,6 +33,8 @@ Asimismo, la aplicación no utiliza mecanismos de ejecución dinámica de códig
 
 En consecuencia, los controles ASVS relacionados con validación positiva, tipado de datos y prevención de inyecciones se consideran cumplidos, mientras que aquellos orientados a entornos web o a la sanitización de formatos complejos se consideran no aplicables.
 
+![ASVS 1](./imagenes/apartado_tres/asvs1.png)
+
 ---
 
 ## 3.3 Código malicioso (ASVS Capítulo 10)
@@ -51,6 +53,8 @@ Este resultado permite verificar el cumplimiento de los controles ASVS relaciona
 - La ausencia de funcionalidades ocultas o no documentadas.
 - El uso seguro de funciones del sistema y del lenguaje.
 
+![ASVS 2](./imagenes/apartado_tres/asvs2.png)
+
 ---
 
 ## 3.4 Uso de herramientas automáticas de análisis
@@ -60,6 +64,8 @@ Además de la revisión manual del código fuente, se ha utilizado una herramien
 Bandit ha permitido comprobar de forma objetiva y automatizada varios controles relacionados con código malicioso y ejecución insegura, reforzando los resultados obtenidos durante el análisis manual.
 
 El uso de este tipo de herramientas facilita la detección temprana de problemas de seguridad y complementa la revisión manual del código, especialmente en aplicaciones desarrolladas en Python.
+
+![Bandit](./imagenes/apartado_tres/bandit.png)
 
 ---
 
@@ -71,9 +77,13 @@ El estándar ASVS está diseñado principalmente para aplicaciones web con mayor
 
 Los controles aplicables han sido verificados correctamente, obteniéndose una cobertura adecuada para el nivel de seguridad requerido.
 
+![ASVS 3](./imagenes/apartado_tres/asvs3.png)
+
 ---
 
+
 [ASVS-Checklist-Joaquin.ods](https://github.com/JBLeopard/Unidad2-TareaRA2-Joaquin/blob/main/docs/ASVS-Checklist-Joaquin.ods)
+
 
 ## 3.6 Valoración del estándar OWASP ASVS
 
