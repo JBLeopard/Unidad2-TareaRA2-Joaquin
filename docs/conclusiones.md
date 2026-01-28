@@ -29,3 +29,7 @@ Esta tarea pone de manifiesto la importancia de combinar:
 - Ejecución en entornos aislados
 
 Todo ello contribuye a una **puesta en producción más segura**, alineada con los principios de DevSecOps.
+
+---
+
+![](./imagenes/seguridad.jpg)
