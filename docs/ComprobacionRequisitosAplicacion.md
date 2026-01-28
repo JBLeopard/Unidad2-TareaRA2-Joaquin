@@ -79,11 +79,9 @@ Los controles aplicables han sido verificados correctamente, obteniéndose una c
 
 ![ASVS 3](./imagenes/apartado_tres/asvs3.png)
 
----
-
-
 [ASVS-Checklist-Joaquin.ods](https://github.com/JBLeopard/Unidad2-TareaRA2-Joaquin/blob/main/docs/ASVS-Checklist-Joaquin.ods)
 
+---
 
 ## 3.6 Valoración del estándar OWASP ASVS
 
