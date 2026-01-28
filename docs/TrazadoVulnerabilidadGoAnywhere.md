@@ -24,7 +24,7 @@ El trazado comienza a partir de un artículo publicado por INCIBE, donde se info
 En dicho artículo se describe de forma general el problema y se proporcionan referencias externas para ampliar la información.
 
 ![INCIBE 1](./imagenes/apartado_uno/incibe1.png)
-![INCIBE 1](./imagenes/apartado_uno/incibe2.png)
+![INCIBE 2](./imagenes/apartado_uno/incibe2.png)
 
 ---
 
@@ -39,7 +39,7 @@ En esta página se detallan:
 - Las medidas de mitigación y parches disponibles  
 
 ![FORTRA 1](./imagenes/apartado_uno/fortra1.png)
-![FORTRA 1](./imagenes/apartado_uno/fortra2.png)
+![FORTRA 2](./imagenes/apartado_uno/fortra2.png)
 
 ---
 
@@ -54,7 +54,7 @@ Accedemos a la página oficial de **cve.org**, donde se muestra la información 
 - Fecha de publicación  
 
 ![CVE 1](./imagenes/apartado_uno/cve1.png)
-![CVE 1](./imagenes/apartado_uno/cve2.png)
+![CVE 2](./imagenes/apartado_uno/cve2.png)
 
 ---
 
@@ -69,12 +69,12 @@ En la NVD se muestra la puntuación **CVSS**, que indica el nivel de riesgo de l
 - **Puntuación CVSS:** 9.8 Crítica  
 - **Vector CVSS:** Permite analizar los factores utilizados para calcular la puntuación  
 
-![NVD 1](./imagenes/apartado_uno/nvd2.png)
+![NVD 2](./imagenes/apartado_uno/nvd2.png)
 
 También podemos ver las versiones de softwate a las que afecta:  
 
-![NVD 3](./imagenes/9.png)
-![NVD 4](./imagenes/10.png)
+![NVD 3](./imagenes/apartado_uno/nvd3.png)
+![NVD 4](./imagenes/apartado_uno/nvd4.png)
 
 ---
 
@@ -88,20 +88,20 @@ En esta sección se describe:
 - Lenguajes y tecnologías afectadas  
 - Posibles mitigaciones  
 
-![CWE 1](./imagenes/11.png)
+![CWE 1](./imagenes/apartado_uno/cwe1.png)
 
 Se observa la relación de la debilidad con otras CWE, mostrando jerarquías de debilidades padre e hijas.
 
-![CWE 2](./imagenes/12.png)
+![CWE 2](./imagenes/apartado_uno/cwe2.png)
 
 También una lista de CVE relacionadas.
 
-![CWE 3](./imagenes/13.png)
+![CWE 3](./imagenes/apartado_uno/cwe3.png)
 
 Patrones de ataque (CAPEC)  
 Desde la información de la CWE se accede a los **patrones de ataque (CAPEC)** que pueden explotar esta debilidad.  
 
-![CWE 4](./imagenes/14.png)
+![CWE 4](./imagenes/apartado_uno/cwe4.png)
 
 ---
 
@@ -116,7 +116,7 @@ Se detallan:
 - Consecuencias  
 - Posibles mitigaciones  
 
-![CWE 4](./imagenes/14.png)
+![CAPEC](./imagenes/apartado_uno/capec.png)
 
 ---
 
