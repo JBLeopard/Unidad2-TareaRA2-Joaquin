@@ -69,5 +69,6 @@ Incluye vulnerabilidades de inyección, autenticación, gestión de sesiones y v
 
 En el primer acceso es necesario crear la base de datos desde la página de instalación antes de poder acceder a la aplicación.
 
-![bWAPP](./imagenes/2.png)
+![bWAPP 1](./imagenes/apartado_dos/bwapp1.png)
+
 ---
