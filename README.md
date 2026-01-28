@@ -21,32 +21,64 @@ Este repositorio contiene toda la documentación y archivos correspondientes a l
 ```
 Unidad2-TareaRA2-Joaquin/
 ├── docs
+│   ├── ASVS-Checklist-Joaquin.ods
+│   ├── CVE-2024-0204.json
+│   ├── ComprobacionRequisitosAplicacion.md
+│   ├── TrazadoVulnerabilidadGoAnywhere.md
+│   ├── analisisVulnerabilidad.md
 │   ├── conclusiones.md
-│   ├── documentacion.md
-│   ├── ejecucion.md
 │   ├── index.md
-│   ├── notebook_lavadero.ipynb
-│   ├── sandbox.md
-│   ├── tests.md
 │   ├── imagenes
-│   │   ├── comentarios.png
-│   │   ├── errormainapp.png
-│   │   ├── errormainappsol.png
+│   │   ├── apartado_dos
+│   │   │   ├── bwapp1.png
+│   │   │   ├── bwapp1.png
+│   │   │   ├── bwapp1.png
+│   │   │   ├── bwappsql1.png
+│   │   │   ├── bwappsql2.png
+│   │   │   ├── bwappsql3.png
+│   │   │   ├── bwappsql4.png
+│   │   │   ├── bwappsql5.png
+│   │   │   ├── bwappsql6.png
+│   │   │   ├── bwappsql7.png
+│   │   │   ├── bwappsql8.png
+│   │   │   ├── bwappsql9.png
+│   │   │   ├── bwappsql10.png
+│   │   │   ├── bwappsql11.png
+│   │   │   ├── bwappsql12.png
+│   │   │   ├── bwappsql13.png
+│   │   │   ├── dvwa1.png
+│   │   │   ├── dvwa2.png
+│   │   │   ├── kali.png
+│   │   │   ├── owasp1.png
+│   │   │   └── owasp2.png
+│   │   ├── apartado_tres
+│   │   │   ├── asvs1.png
+│   │   │   ├── asvs2.png
+│   │   │   ├── asvs3.png
+│   │   │   ├── bandit.png
+│   │   ├── apartado_uno
+│   │   │   ├── capec.png
+│   │   │   ├── cve1.png
+│   │   │   ├── cve2.png
+│   │   │   ├── cwe1.png
+│   │   │   ├── cwe2.png
+│   │   │   ├── cwe3.png
+│   │   │   ├── cwe4.png
+│   │   │   ├── fortra1.png
+│   │   │   ├── fortra2.png
+│   │   │   ├── incibe1.png
+│   │   │   ├── incibe2.png
+│   │   │   ├── nvd1.png
+│   │   │   ├── nvd2.png
+│   │   │   ├── nvd3.png
+│   │   │   └── nvd1.png
 │   │   ├── logo.png
-│   │   ├── notebook.png
-│   │   ├── sandbox.png
-│   │   ├── testsko.png
-│   │   ├── testsko2.png
-│   │   └── testsok.png
-├── src
-│   ├── lavadero.py
-│   └── main_app.py
-├── tests
-│   └── test_lavadero_unittest.py
+│   │   └── seguridad.jpg
 ├── .github
 │   └── workflows
 │       └── CreacionDocumentacion.yml
 ├── mkdocs.yml
-├── requeriments.txt
-└── README.md
+├── README.md
+└── mkdocs.yml
 ```
+---
