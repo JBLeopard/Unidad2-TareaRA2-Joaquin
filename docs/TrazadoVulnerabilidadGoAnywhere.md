@@ -23,8 +23,8 @@ La vulnerabilidad permite a un atacante no autenticado acceder a funcionalidades
 El trazado comienza a partir de un artículo publicado por INCIBE, donde se informa de una vulnerabilidad crítica que afecta a GoAnywhere MFT.  
 En dicho artículo se describe de forma general el problema y se proporcionan referencias externas para ampliar la información.
 
-![INCIBE 1](./imagenes/1.png)
-![INCIBE 2](./imagenes/2.png)
+![INCIBE 1](./imagenes/apartado_uno/incibe1.png)
+![INCIBE 1](./imagenes/apartado_uno/incibe2.png)
 
 ---
 
@@ -38,8 +38,8 @@ En esta página se detallan:
 - Las versiones afectadas  
 - Las medidas de mitigación y parches disponibles  
 
-![FORTRA 1](./imagenes/3.png)
-![FORTRA 2](./imagenes/4.png)
+![FORTRA 1](./imagenes/apartado_uno/fortra1.png)
+![FORTRA 1](./imagenes/apartado_uno/fortra2.png)
 
 ---
 
@@ -53,8 +53,8 @@ Accedemos a la página oficial de **cve.org**, donde se muestra la información 
 - Referencias oficiales  
 - Fecha de publicación  
 
-![CVE 1](./imagenes/5.png)
-![CVE 2](./imagenes/6.png)
+![CVE 1](./imagenes/apartado_uno/cve1.png)
+![CVE 1](./imagenes/apartado_uno/cve2.png)
 
 ---
 
@@ -62,14 +62,14 @@ Accedemos a la página oficial de **cve.org**, donde se muestra la información 
 
 A continuación se consulta la **National Vulnerability Database (NVD)** mantenida por el NIST, donde se amplía la información técnica.
 
-![NVD 1](./imagenes/7.png)
+![NVD 1](./imagenes/apartado_uno/nvd1.png)
 
 En la NVD se muestra la puntuación **CVSS**, que indica el nivel de riesgo de la vulnerabilidad.
 
 - **Puntuación CVSS:** 9.8 Crítica  
 - **Vector CVSS:** Permite analizar los factores utilizados para calcular la puntuación  
 
-![NVD 2](./imagenes/8.png)
+![NVD 1](./imagenes/apartado_uno/nvd2.png)
 
 También podemos ver las versiones de softwate a las que afecta:  
 
