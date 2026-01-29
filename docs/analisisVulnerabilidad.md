@@ -126,7 +126,7 @@ Al renderizarse la página con los números del 1 al 7, se identificó que solo 
 
 ---
 
-### 2.5.3  Exfiltración de datos
+### 2.5.4  Exfiltración de datos
 
 Puedo obtener el nombre de la base de datos, sustituyendo el marcador de las comlunmas por funciones como `database()`, `user()`, `version()`,...:
 
@@ -141,7 +141,7 @@ Saco las tablas de aplicación con:
 
 ---
 
-### 2.5.4  Sacar más información, contraseñas de usuarios
+### 2.5.5  Sacar más información, contraseñas de usuarios
 
 Voy a por la tabla usuarios, ya que se pueden conseguir usuarios y contraseñas...:
 
