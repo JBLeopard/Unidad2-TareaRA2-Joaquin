@@ -13,7 +13,7 @@ El análisis se ha realizado mediante revisión manual del código fuente y apoy
 
 ## 3.1 Descripción de la aplicación y nivel de seguridad ASVS
 
-La aplicación analizada es una **aplicación local de consola desarrollada en Python**, cuyo objetivo es simular el funcionamiento de un lavadero automático.
+La aplicación que se analiza es la de la unidad anterior, una **aplicación local de consola desarrollada en Python**, cuyo objetivo es simular el funcionamiento de un lavadero automático.
 
 Se trata de una aplicación sin interfaz web, sin comunicaciones de red y sin acceso a bases de datos. La interacción con el usuario se realiza exclusivamente mediante la introducción de opciones por consola, guiadas por el propio flujo de la aplicación.
 
@@ -21,7 +21,7 @@ Debido a estas características, la aplicación no está expuesta a Internet ni 
 
 ---
 
-## 3.2 Validación de entrada (ASVS Capítulo 5)
+## 3.2 Validación de entrada (Input_Validation)
 
 El capítulo de validación de entrada del estándar ASVS está orientado principalmente a aplicaciones web que procesan datos procedentes de formularios, peticiones HTTP o servicios externos. En el caso de la aplicación analizada, muchos de los requisitos definidos en este capítulo no son aplicables debido a su naturaleza local.
 
@@ -37,7 +37,7 @@ En consecuencia, los controles ASVS relacionados con validación positiva, tipad
 
 ---
 
-## 3.3 Código malicioso (ASVS Capítulo 10)
+## 3.3 Código malicioso (Malicious_code)
 
 Para la comprobación de los requisitos relacionados con la detección de código malicioso se ha utilizado una **herramienta de análisis estático de seguridad** específica para aplicaciones Python.
 
@@ -90,3 +90,5 @@ OWASP ASVS es un estándar muy completo que permite estructurar y documentar la 
 Aunque puede resultar extenso para aplicaciones pequeñas o locales, facilita la identificación de los requisitos realmente aplicables y permite justificar de forma clara aquellos que no lo son.
 
 Su aplicación contribuye a mejorar la comprensión de los requisitos de seguridad y proporciona una base sólida para el desarrollo de aplicaciones más seguras.
+
+---
