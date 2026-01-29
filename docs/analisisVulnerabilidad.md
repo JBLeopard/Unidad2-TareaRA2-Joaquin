@@ -72,9 +72,28 @@ En el primer acceso es necesario crear la base de datos desde la página de inst
 ![bWAPP 1](./imagenes/apartado_dos/bwapp1.png)
 ![bWAPP 2](./imagenes/apartado_dos/bwapp2.png)
 ![bWAPP 3](./imagenes/apartado_dos/bwapp3.png)
+
+---
+ 
+### 2.5 SQL Injection (GET/Search) en bWAPP
+
+
 ![bWAPPSQL 1](./imagenes/apartado_dos/bwappsql1.png)
+
+La página potencialmente vulnerable esta formada por una tabla y un campo de búsqueda. Si se realiza una búsqueda vacía, la aplicación lista unas películas:  
+
 ![bWAPPSQL 2](./imagenes/apartado_dos/bwappsql2.png)
+
+## 2.5.1 Identificación de la vulnerabilidad
+
+Se detecta que el parámetro `title` en `sqli_1.php` es vulnerable a SQL Injection al introducir una comilla simple (`'`), lo que rompe la consulta original.  
+
 ![bWAPPSQL 3](./imagenes/apartado_dos/bwappsql3.png)
+
+## 2.5.1 Identificación de la vulnerabilidad
+
+Se emplea el método de incremento manual con `UNION SELECT`, voy probando consultas incrementando el número de constantes (`1`, `1,2`, `1,2,3`...) hasta que la página carga correctamente.  
+
 ![bWAPPSQL 4](./imagenes/apartado_dos/bwappsql4.png)
 ![bWAPPSQL 5](./imagenes/apartado_dos/bwappsql5.png)
 ![bWAPPSQL 6](./imagenes/apartado_dos/bwappsql6.png)
