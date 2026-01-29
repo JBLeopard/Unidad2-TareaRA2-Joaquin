@@ -16,6 +16,7 @@ Para la realización de esta actividad se han puesto en marcha varios contenedor
 
 DVWA es una aplicación web deliberadamente vulnerable que permite practicar distintos tipos de ataques web, como inyección SQL, XSS, CSRF, entre otros.  
 Se accede a través del navegador y permite configurar distintos niveles de seguridad.  
+
 **Acceso:**
 - URL: http://localhost:8002
 - Usuario: admin
@@ -31,6 +32,7 @@ En el primer acceso es necesario crear la base de datos antes de poder comenzar 
 ### 2.2 OWASP Multillidae II
 
 OWASP Multillidae II es otra aplicación web vulnerable mantenida por OWASP que permite entrenar en distintos escenarios de ataque.  
+
 **Acceso:**
 - URL: http://localhost  
 - PhpMyAdmin: http://localhost:81  
@@ -49,7 +51,8 @@ Kali Linux se incluye como máquina de apoyo para la realización de pruebas de 
 
 **Acceso:**  
 - Kali Linux se utiliza como máquina de apoyo para realizar pruebas de seguridad sobre el resto de aplicaciones.  
-- El acceso se realiza mediante terminal, utilizando herramientas de análisis y test de intrusión.  
+- El acceso se realiza mediante terminal, utilizando herramientas de análisis y test de intrusión.
+
 ```bash
 docker exec -it kali /bin/bash
 ```
