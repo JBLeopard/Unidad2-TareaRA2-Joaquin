@@ -17,7 +17,8 @@ Para la realización de esta actividad se han puesto en marcha varios contenedor
 DVWA es una aplicación web deliberadamente vulnerable que permite practicar distintos tipos de ataques web, como inyección SQL, XSS, CSRF, entre otros.  
 Se accede a través del navegador y permite configurar distintos niveles de seguridad.  
 
-**Acceso:**
+**Acceso:**  
+
 - URL: http://localhost:8002
 - Usuario: admin
 - Contraseña: password
@@ -33,7 +34,8 @@ En el primer acceso es necesario crear la base de datos antes de poder comenzar 
 
 OWASP Multillidae II es otra aplicación web vulnerable mantenida por OWASP que permite entrenar en distintos escenarios de ataque.  
 
-**Acceso:**
+**Acceso:**  
+
 - URL: http://localhost  
 - PhpMyAdmin: http://localhost:81  
 - PhpLdapAdmin: http://localhost:82  
@@ -50,6 +52,7 @@ No es necesario usuario ni contraseña para acceder a la aplicación principal. 
 Kali Linux se incluye como máquina de apoyo para la realización de pruebas de seguridad, utilizando herramientas de análisis y test de intrusión sobre el resto de aplicaciones.
 
 **Acceso:**  
+
 - Kali Linux se utiliza como máquina de apoyo para realizar pruebas de seguridad sobre el resto de aplicaciones.  
 - El acceso se realiza mediante terminal, utilizando herramientas de análisis y test de intrusión.
 
@@ -65,7 +68,8 @@ docker exec -it kali /bin/bash
 bWAPP es una aplicación web vulnerable que contiene más de 100 vulnerabilidades diferentes, orientadas al aprendizaje de seguridad web.  
 Incluye vulnerabilidades de inyección, autenticación, gestión de sesiones y validación de entradas, entre otras.  
 
-**Acceso:**
+**Acceso:**  
+
 - URL: http://localhost:8001
 - Usuario: bee
 - Contraseña: bug
