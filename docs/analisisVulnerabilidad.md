@@ -36,7 +36,7 @@ OWASP Multillidae II es otra aplicación web vulnerable mantenida por OWASP que 
 - PhpMyAdmin: http://localhost:81  
 - PhpLdapAdmin: http://localhost:82  
 
-No es necesario usuario ni contraseña para acceder a la aplicación principal.ye servicios adicionales como acceso a bases de datos y servicios LDAP.  
+No es necesario usuario ni contraseña para acceder a la aplicación principal. Incluye servicios adicionales como acceso a bases de datos y servicios LDAP.  
 
 ![OWASP 1](./imagenes/apartado_dos/owasp1.png)
 ![OWASP 2](./imagenes/apartado_dos/owasp2.png)
