@@ -30,7 +30,7 @@ En el primer acceso es necesario crear la base de datos antes de poder comenzar 
 
 ---
 
-### 2.2 OWASP Multillidae II
+## 2.2 OWASP Multillidae II
 
 OWASP Multillidae II es otra aplicación web vulnerable mantenida por OWASP que permite entrenar en distintos escenarios de ataque.  
 
@@ -47,7 +47,7 @@ No es necesario usuario ni contraseña para acceder a la aplicación principal. 
 
 ---
 
-### 2.3 Kali Linux
+## 2.3 Kali Linux
 
 Kali Linux se incluye como máquina de apoyo para la realización de pruebas de seguridad, utilizando herramientas de análisis y test de intrusión sobre el resto de aplicaciones.
 
@@ -63,7 +63,7 @@ docker exec -it kali /bin/bash
 
 ---
 
-### 2.4 bWAPP (Buggy Web Application)
+## 2.4 bWAPP (Buggy Web Application)
 
 bWAPP es una aplicación web vulnerable que contiene más de 100 vulnerabilidades diferentes, orientadas al aprendizaje de seguridad web.  
 Incluye vulnerabilidades de inyección, autenticación, gestión de sesiones y validación de entradas, entre otras.  
@@ -82,7 +82,7 @@ En el primer acceso es necesario crear la base de datos desde la página de inst
 
 ---
  
-### 2.5 SQL Injection (GET/Search) en bWAPP desde el punto de vista atacante
+## 2.5 SQL Injection (GET/Search) en bWAPP desde el punto de vista atacante
 
 
 ![bWAPPSQL 1](./imagenes/apartado_dos/bwappsql1.png)
