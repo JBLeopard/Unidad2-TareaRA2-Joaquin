@@ -1,0 +1,1221 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentación de la actividad de la Unidad 2">
+      
+      
+        <meta name="author" content="JBLeopard">
+      
+      
+      
+        <link rel="prev" href="../TrazadoVulnerabilidadGoAnywhere/">
+      
+      
+        <link rel="next" href="../ComprobacionRequisitosAplicacion/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Análisis de vulnerabilidad en máquina vulnerable - Unidad2-TareaRA2-Joaquin</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-documentacion-de-la-explotacion-y-securizacion-de-la-vulnerabilidad" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Unidad2-TareaRA2-Joaquin" class="md-header__button md-logo" aria-label="Unidad2-TareaRA2-Joaquin" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Unidad2-TareaRA2-Joaquin
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Análisis de vulnerabilidad en máquina vulnerable
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Unidad2-TareaRA2-Joaquin" class="md-nav__button md-logo" aria-label="Unidad2-TareaRA2-Joaquin" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Unidad2-TareaRA2-Joaquin
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TrazadoVulnerabilidadGoAnywhere/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trazado de vulnerabiliad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análisis de vulnerabilidad en máquina vulnerable
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análisis de vulnerabilidad en máquina vulnerable
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-dvwa-damn-vulnerable-web-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 DVWA (Damn Vulnerable Web Application)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-owasp-multillidae-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 OWASP Multillidae II
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-kali-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Kali Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-bwapp-buggy-web-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 bWAPP (Buggy Web Application)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-sql-injection-getsearch-en-bwapp-desde-el-punto-de-vista-atacante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 SQL Injection (GET/Search) en bWAPP desde el punto de vista atacante
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 SQL Injection (GET/Search) en bWAPP desde el punto de vista atacante">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#251-identificacion-de-la-vulnerabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.1 Identificación de la vulnerabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#252-determinacion-de-columnas-metodo-de-tanteo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.2 Determinación de columnas (Método de Tanteo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#253-mapeo-de-campos-visibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.3 Mapeo de campos visibles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#254-exfiltracion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.4 Exfiltración de datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#255-sacar-mas-informacion-contrasenas-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.5 Sacar más información, contraseñas de usuarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-sql-injection-getsearch-en-bwapp-desde-el-punto-de-vista-defensivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 SQL Injection (GET/Search) en bWAPP desde el punto de vista defensivo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 SQL Injection (GET/Search) en bWAPP desde el punto de vista defensivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#261-descripcion-de-la-funcionalidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.1 Descripción de la funcionalidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#262-identificacion-del-archivo-vulnerable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.2 Identificación del archivo vulnerable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#263-inspeccion-del-codigo-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.3 Inspección del código fuente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#264-analisis-del-tratamiento-del-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.4 Análisis del tratamiento del input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#265-funciones-de-filtrado-segun-el-nivel-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.5 Funciones de filtrado según el nivel de seguridad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#266-nivel-de-seguridad-0-vulnerable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.6 Nivel de seguridad 0 – Vulnerable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#267-nivel-de-seguridad-1-proteccion-debil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.7 Nivel de seguridad 1 – Protección débil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#268-nivel-de-seguridad-2-proteccion-intermedia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.8 Nivel de seguridad 2 – Protección intermedia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#269-nivel-de-seguridad-3-proteccion-mas-robusta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.9 Nivel de seguridad 3 – Protección más robusta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2610-nivel-de-seguridad-4-proteccion-adicional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.10 Nivel de seguridad 4 – Protección adicional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2611-conclusion-y-enlaces-a-archivos-analizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.11 Conclusión y enlaces a archivos analizados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ComprobacionRequisitosAplicacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comprobación de los requisitos de Seguridad de una aplicación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexión sobre los riesgos de las aplicaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-dvwa-damn-vulnerable-web-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 DVWA (Damn Vulnerable Web Application)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-owasp-multillidae-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 OWASP Multillidae II
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-kali-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Kali Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-bwapp-buggy-web-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 bWAPP (Buggy Web Application)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-sql-injection-getsearch-en-bwapp-desde-el-punto-de-vista-atacante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 SQL Injection (GET/Search) en bWAPP desde el punto de vista atacante
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 SQL Injection (GET/Search) en bWAPP desde el punto de vista atacante">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#251-identificacion-de-la-vulnerabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.1 Identificación de la vulnerabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#252-determinacion-de-columnas-metodo-de-tanteo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.2 Determinación de columnas (Método de Tanteo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#253-mapeo-de-campos-visibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.3 Mapeo de campos visibles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#254-exfiltracion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.4 Exfiltración de datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#255-sacar-mas-informacion-contrasenas-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.5 Sacar más información, contraseñas de usuarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-sql-injection-getsearch-en-bwapp-desde-el-punto-de-vista-defensivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 SQL Injection (GET/Search) en bWAPP desde el punto de vista defensivo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 SQL Injection (GET/Search) en bWAPP desde el punto de vista defensivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#261-descripcion-de-la-funcionalidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.1 Descripción de la funcionalidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#262-identificacion-del-archivo-vulnerable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.2 Identificación del archivo vulnerable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#263-inspeccion-del-codigo-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.3 Inspección del código fuente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#264-analisis-del-tratamiento-del-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.4 Análisis del tratamiento del input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#265-funciones-de-filtrado-segun-el-nivel-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.5 Funciones de filtrado según el nivel de seguridad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#266-nivel-de-seguridad-0-vulnerable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.6 Nivel de seguridad 0 – Vulnerable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#267-nivel-de-seguridad-1-proteccion-debil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.7 Nivel de seguridad 1 – Protección débil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#268-nivel-de-seguridad-2-proteccion-intermedia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.8 Nivel de seguridad 2 – Protección intermedia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#269-nivel-de-seguridad-3-proteccion-mas-robusta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.9 Nivel de seguridad 3 – Protección más robusta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2610-nivel-de-seguridad-4-proteccion-adicional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.10 Nivel de seguridad 4 – Protección adicional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2611-conclusion-y-enlaces-a-archivos-analizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6.11 Conclusión y enlaces a archivos analizados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="2-documentacion-de-la-explotacion-y-securizacion-de-la-vulnerabilidad">2. Documentación de la explotación y securización de la vulnerabilidad<a class="headerlink" href="#2-documentacion-de-la-explotacion-y-securizacion-de-la-vulnerabilidad" title="Permanent link">&para;</a></h1>
+<p>En esta práctica se ha trabajado con un entorno de máquinas vulnerables y se ha realizado un <strong>test de intrusión</strong> explotando una vulnerabilidad de <strong>SQL Injection</strong> en la aplicación bWAPP.<br />
+En esta documentación se proponen los siguientes objetivos:  </p>
+<ul>
+<li>Conocer distintos proyectos de máquinas vulnerables para prácticas de seguridad.  </li>
+<li>Utilizar un entorno controlado para la realización de pruebas de intrusión.  </li>
+<li>Identificar y explotar una vulnerabilidad de tipo SQL Injection.  </li>
+<li>Analizar el código fuente responsable de la vulnerabilidad.</li>
+</ul>
+<p>Para la realización de esta actividad se han puesto en marcha varios contenedores con docker que forman un entorno de pruebas con aplicaciones web vulnerables.</p>
+<hr />
+<h2 id="21-dvwa-damn-vulnerable-web-application">2.1 DVWA (Damn Vulnerable Web Application)<a class="headerlink" href="#21-dvwa-damn-vulnerable-web-application" title="Permanent link">&para;</a></h2>
+<p>DVWA es una aplicación web deliberadamente vulnerable que permite practicar distintos tipos de ataques web, como inyección SQL, XSS, CSRF, entre otros.<br />
+Se accede a través del navegador y permite configurar distintos niveles de seguridad.  </p>
+<p><strong>Acceso:</strong>  </p>
+<ul>
+<li>URL: http://localhost:8002</li>
+<li>Usuario: admin</li>
+<li>Contraseña: password</li>
+</ul>
+<p>En el primer acceso es necesario crear la base de datos antes de poder comenzar con las pruebas.</p>
+<p><img alt="DVWA 1" src="../imagenes/apartado_dos/dvwa1.png" />
+<img alt="DVWA 2" src="../imagenes/apartado_dos/dvwa2.png" /></p>
+<hr />
+<h2 id="22-owasp-multillidae-ii">2.2 OWASP Multillidae II<a class="headerlink" href="#22-owasp-multillidae-ii" title="Permanent link">&para;</a></h2>
+<p>OWASP Multillidae II es otra aplicación web vulnerable mantenida por OWASP que permite entrenar en distintos escenarios de ataque.  </p>
+<p><strong>Acceso:</strong>  </p>
+<ul>
+<li>URL: http://localhost  </li>
+<li>PhpMyAdmin: http://localhost:81  </li>
+<li>PhpLdapAdmin: http://localhost:82  </li>
+</ul>
+<p>No es necesario usuario ni contraseña para acceder a la aplicación principal. Incluye servicios adicionales como acceso a bases de datos y servicios LDAP.  </p>
+<p><img alt="OWASP 1" src="../imagenes/apartado_dos/owasp1.png" />
+<img alt="OWASP 2" src="../imagenes/apartado_dos/owasp2.png" /></p>
+<hr />
+<h2 id="23-kali-linux">2.3 Kali Linux<a class="headerlink" href="#23-kali-linux" title="Permanent link">&para;</a></h2>
+<p>Kali Linux se incluye como máquina de apoyo para la realización de pruebas de seguridad, utilizando herramientas de análisis y test de intrusión sobre el resto de aplicaciones.</p>
+<p><strong>Acceso:</strong>  </p>
+<ul>
+<li>Kali Linux se utiliza como máquina de apoyo para realizar pruebas de seguridad sobre el resto de aplicaciones.  </li>
+<li>El acceso se realiza mediante terminal, utilizando herramientas de análisis y test de intrusión.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>kali<span class="w"> </span>/bin/bash
+</code></pre></div>
+
+<p><img alt="Kali Linux" src="../imagenes/apartado_dos/kali.png" /></p>
+<hr />
+<h2 id="24-bwapp-buggy-web-application">2.4 bWAPP (Buggy Web Application)<a class="headerlink" href="#24-bwapp-buggy-web-application" title="Permanent link">&para;</a></h2>
+<p>bWAPP es una aplicación web vulnerable que contiene más de 100 vulnerabilidades diferentes, orientadas al aprendizaje de seguridad web.<br />
+Incluye vulnerabilidades de inyección, autenticación, gestión de sesiones y validación de entradas, entre otras.  </p>
+<p><strong>Acceso:</strong>  </p>
+<ul>
+<li>URL: http://localhost:8001</li>
+<li>Usuario: bee</li>
+<li>Contraseña: bug</li>
+</ul>
+<p>En el primer acceso es necesario crear la base de datos desde la página de instalación antes de poder acceder a la aplicación.</p>
+<p><img alt="bWAPP 1" src="../imagenes/apartado_dos/bwapp1.png" />
+<img alt="bWAPP 2" src="../imagenes/apartado_dos/bwapp2.png" />
+<img alt="bWAPP 3" src="../imagenes/apartado_dos/bwapp3.png" /></p>
+<hr />
+<h2 id="25-sql-injection-getsearch-en-bwapp-desde-el-punto-de-vista-atacante">2.5 SQL Injection (GET/Search) en bWAPP desde el punto de vista atacante<a class="headerlink" href="#25-sql-injection-getsearch-en-bwapp-desde-el-punto-de-vista-atacante" title="Permanent link">&para;</a></h2>
+<p><img alt="bWAPPSQL 1" src="../imagenes/apartado_dos/bwappsql1.png" /></p>
+<p>La página potencialmente vulnerable esta formada por una tabla y un campo de búsqueda. Si se realiza una búsqueda vacía, la aplicación lista unas películas:  </p>
+<p><img alt="bWAPPSQL 2" src="../imagenes/apartado_dos/bwappsql2.png" /></p>
+<hr />
+<h3 id="251-identificacion-de-la-vulnerabilidad">2.5.1 Identificación de la vulnerabilidad<a class="headerlink" href="#251-identificacion-de-la-vulnerabilidad" title="Permanent link">&para;</a></h3>
+<p>Se detecta que el parámetro <code>title</code> en <code>sqli_1.php</code> es vulnerable a SQL Injection al introducir una comilla simple (<code>'</code>), lo que rompe la consulta original.  </p>
+<p><img alt="bWAPPSQL 3" src="../imagenes/apartado_dos/bwappsql3.png" /></p>
+<hr />
+<h3 id="252-determinacion-de-columnas-metodo-de-tanteo">2.5.2 Determinación de columnas (Método de Tanteo)<a class="headerlink" href="#252-determinacion-de-columnas-metodo-de-tanteo" title="Permanent link">&para;</a></h3>
+<p>Se emplea el método de incremento manual con <code>UNION SELECT</code>, voy probando consultas incrementando el número de constantes (<code>1</code>, <code>1,2</code>, <code>1,2,3</code>...) hasta que la página carga correctamente.  </p>
+<p><img alt="bWAPPSQL 4" src="../imagenes/apartado_dos/bwappsql4.png" /></p>
+<p>Al llegar a <code>' union select 1,2,3,4,5,6,7-- -</code>, el error desapareció, confirmando que la tabla tiene <strong>7 columnas</strong>.  </p>
+<p><img alt="bWAPPSQL 5" src="../imagenes/apartado_dos/bwappsql5.png" /></p>
+<hr />
+<h3 id="253-mapeo-de-campos-visibles">2.5.3 Mapeo de campos visibles<a class="headerlink" href="#253-mapeo-de-campos-visibles" title="Permanent link">&para;</a></h3>
+<p>Al renderizarse la página con los números del 1 al 7, se identificó que solo cuatro columnas son visibles en el HTML:  </p>
+<ul>
+<li><strong>Columna 2:</strong> Title  </li>
+<li><strong>Columna 3:</strong> Release  </li>
+<li><strong>Columna 4:</strong> Genre  </li>
+<li><strong>Columna 5:</strong> Character</li>
+</ul>
+<p><img alt="bWAPPSQL 6" src="../imagenes/apartado_dos/bwappsql6.png" /></p>
+<hr />
+<h3 id="254-exfiltracion-de-datos">2.5.4  Exfiltración de datos<a class="headerlink" href="#254-exfiltracion-de-datos" title="Permanent link">&para;</a></h3>
+<p>Puedo obtener el nombre de la base de datos, sustituyendo el marcador de las comlunmas por funciones como <code>database()</code>, <code>user()</code>, <code>version()</code>,...:</p>
+<p><img alt="bWAPPSQL 7" src="../imagenes/apartado_dos/bwappsql7.png" />
+<img alt="bWAPPSQL 8" src="../imagenes/apartado_dos/bwappsql8.png" /></p>
+<p>Saco las tablas de aplicación con:  </p>
+<p><code>' union select 1,database(),user(),table_name,version(),6,7 from information_schema.tables where table_schema=database() -- -</code>.</p>
+<p><img alt="bWAPPSQL 9" src="../imagenes/apartado_dos/bwappsql9.png" /></p>
+<hr />
+<h3 id="255-sacar-mas-informacion-contrasenas-de-usuarios">2.5.5  Sacar más información, contraseñas de usuarios<a class="headerlink" href="#255-sacar-mas-informacion-contrasenas-de-usuarios" title="Permanent link">&para;</a></h3>
+<p>Voy a por la tabla usuarios, ya que se pueden conseguir usuarios y contraseñas...:</p>
+<p><code>' union select 1,column_name,3,4,5,6,7 from information_schema.columns where table_name='users' and table_schema=database() -- -</code>.</p>
+<p><img alt="bWAPPSQL 10" src="../imagenes/apartado_dos/bwappsql10.png" /></p>
+<p>Extraigo las claves de usuario con <code>' union select 1,login,password,email,secret,6,7 from users where password&lt;&gt;''-'</code>.</p>
+<p><img alt="bWAPPSQL 11" src="../imagenes/apartado_dos/bwappsql11.png" /></p>
+<p>Copio el hash de la clave y lo identifico en https://duckduckgo.com/.</p>
+<p><img alt="bWAPPSQL 12" src="../imagenes/apartado_dos/bwappsql12.png" /></p>
+<p>Por último, uso un descifrador online sha1: https://sha1.gromweb.com/, la clave de ambos usuarios es <strong>bug</strong>.</p>
+<p><img alt="bWAPPSQL 12" src="../imagenes/apartado_dos/bwappsql13.png" /></p>
+<hr />
+<h2 id="26-sql-injection-getsearch-en-bwapp-desde-el-punto-de-vista-defensivo">2.6 SQL Injection (GET/Search) en bWAPP desde el punto de vista defensivo<a class="headerlink" href="#26-sql-injection-getsearch-en-bwapp-desde-el-punto-de-vista-defensivo" title="Permanent link">&para;</a></h2>
+<p>En este apartado se realiza un análisis del código vulnerable a SQL Injection desde el punto de vista defensivo, inspeccionando cómo la aplicación trata el input del usuario dependiendo del nivel de seguridad configurado en bWAPP.</p>
+<hr />
+<h3 id="261-descripcion-de-la-funcionalidad">2.6.1 Descripción de la funcionalidad<a class="headerlink" href="#261-descripcion-de-la-funcionalidad" title="Permanent link">&para;</a></h3>
+<p>La funcionalidad analizada corresponde a la búsqueda de películas mediante un formulario que envía el parámetro <code>title</code> por método GET.</p>
+<p><img alt="bWAPPSQL 1" src="../imagenes/apartado_dos/bwappsql1.png" /></p>
+<hr />
+<h3 id="262-identificacion-del-archivo-vulnerable">2.6.2 Identificación del archivo vulnerable<a class="headerlink" href="#262-identificacion-del-archivo-vulnerable" title="Permanent link">&para;</a></h3>
+<p>El archivo que implementa esta funcionalidad es: <code>/var/www/html/sqli_1.php</code></p>
+<p>Este archivo recibe el valor introducido por el usuario y lo utiliza para construir una consulta SQL.</p>
+<p><img alt="bWAPPSQL 3" src="../imagenes/apartado_dos/bwappsql3.png" /></p>
+<hr />
+<h3 id="263-inspeccion-del-codigo-fuente">2.6.3 Inspección del código fuente<a class="headerlink" href="#263-inspeccion-del-codigo-fuente" title="Permanent link">&para;</a></h3>
+<p>Accedemos al contenedor bWAPP y mostramos el contenido del archivo con numeración de líneas para facilitar su análisis:</p>
+<div class="codehilite"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>bwapp<span class="w"> </span>/bin/bash
+cat<span class="w"> </span>-n<span class="w"> </span>/var/www/html/sqli_1.php
+</code></pre></div>
+
+<p><img alt="bWAPPSQL 3" src="../imagenes/apartado_dos/bwappsql14.png" /></p>
+<hr />
+<h3 id="264-analisis-del-tratamiento-del-input">2.6.4 Análisis del tratamiento del input<a class="headerlink" href="#264-analisis-del-tratamiento-del-input" title="Permanent link">&para;</a></h3>
+<p>En el archivo sqli_1.php se encuentra el siguiente fragmento de código:</p>
+<div class="codehilite"><pre><span></span><code><span class="x">$title = $_GET[&quot;title&quot;];</span>
+<span class="x">$sql = &quot;SELECT * FROM movies WHERE title LIKE &#39;%$title%&#39;&quot;;</span>
+</code></pre></div>
+
+<p><img alt="bWAPPSQL 3" src="../imagenes/apartado_dos/bwappsql15.png" /></p>
+<p>El valor introducido por el usuario se concatena directamente dentro de la consulta SQL, lo que implica que el input pasa a formar parte de la estructura de la consulta sin validación previa.</p>
+<hr />
+<h3 id="265-funciones-de-filtrado-segun-el-nivel-de-seguridad">2.6.5 Funciones de filtrado según el nivel de seguridad<a class="headerlink" href="#265-funciones-de-filtrado-segun-el-nivel-de-seguridad" title="Permanent link">&para;</a></h3>
+<p>El tratamiento del input depende del valor de la cookie security_level.
+Las funciones encargadas del filtrado se encuentran definidas en el archivo:</p>
+<div class="codehilite"><pre><span></span><code>/var/www/html/functions_external.php
+</code></pre></div>
+
+<p><img alt="bWAPPSQL 3" src="../imagenes/apartado_dos/bwappsql15.png" /></p>
+<hr />
+<h3 id="266-nivel-de-seguridad-0-vulnerable">2.6.6 Nivel de seguridad 0 – Vulnerable<a class="headerlink" href="#266-nivel-de-seguridad-0-vulnerable" title="Permanent link">&para;</a></h3>
+<p><strong>Función no_check()</strong>  </p>
+<div class="codehilite"><pre><span></span><code><span class="x">function no_check($data)</span>
+<span class="x">{</span>
+<span class="x">    return $data;</span>
+<span class="x">}</span>
+</code></pre></div>
+
+<p><img alt="bWAPPSQL 3" src="../imagenes/apartado_dos/bwappsql16.png" /></p>
+<p>En este nivel, la función devuelve directamente el input del usuario sin aplicar ningún tipo de validación, filtrado ni escape de caracteres especiales.<br />
+Como consecuencia, caracteres como la comilla simple (') se interpretan como parte de la sintaxis SQL, permitiendo modificar la consulta original.<br />
+Esto provoca que la aplicación sea completamente vulnerable a ataques de SQL Injection.  </p>
+<hr />
+<h3 id="267-nivel-de-seguridad-1-proteccion-debil">2.6.7 Nivel de seguridad 1 – Protección débil<a class="headerlink" href="#267-nivel-de-seguridad-1-proteccion-debil" title="Permanent link">&para;</a></h3>
+<p><strong>Función sqli_check_1()</strong> </p>
+<div class="codehilite"><pre><span></span><code><span class="x">function sqli_check_1($data)</span>
+<span class="x">{</span>
+<span class="x">    return addslashes($data);</span>
+<span class="x">}</span>
+</code></pre></div>
+
+<hr />
+<p><img alt="bWAPPSQL 3" src="../imagenes/apartado_dos/bwappsql17.png" /></p>
+<p>En este nivel se utiliza la función addslashes(), que añade barras invertidas delante de caracteres especiales como:</p>
+<ul>
+<li>comilla simple (')  </li>
+<li>comilla doble (")  </li>
+<li>barra invertida ()  </li>
+</ul>
+<p>Este filtrado dificulta ataques básicos de SQL Injection, ya que evita que las comillas rompan directamente la consulta SQL.<br />
+No obstante, este método no es seguro frente a todos los escenarios y no se considera una protección adecuada en aplicaciones reales.  </p>
+<hr />
+<h3 id="268-nivel-de-seguridad-2-proteccion-intermedia">2.6.8 Nivel de seguridad 2 – Protección intermedia<a class="headerlink" href="#268-nivel-de-seguridad-2-proteccion-intermedia" title="Permanent link">&para;</a></h3>
+<p><strong>Función sqli_check_2()</strong>  </p>
+<div class="codehilite"><pre><span></span><code><span class="x">function sqli_check_2($data)</span>
+<span class="x">{</span>
+<span class="x">    return mysql_real_escape_string($data);</span>
+<span class="x">}</span>
+</code></pre></div>
+
+<p><img alt="bWAPPSQL 3" src="../imagenes/apartado_dos/bwappsql18.png" /></p>
+<p>En este nivel se emplea la función mysql_real_escape_string(), que escapa los caracteres especiales teniendo en cuenta el contexto de la base de datos MySQL.<br />
+Este enfoque ofrece una protección superior a addslashes(), aunque presenta las siguientes limitaciones:  </p>
+<ul>
+<li>Depende de la extensión mysql, actualmente obsoleta</li>
+<li>No utiliza consultas preparadas  </li>
+<li>La consulta SQL sigue construyéndose mediante concatenación</li>
+</ul>
+<hr />
+<h3 id="269-nivel-de-seguridad-3-proteccion-mas-robusta">2.6.9 Nivel de seguridad 3 – Protección más robusta<a class="headerlink" href="#269-nivel-de-seguridad-3-proteccion-mas-robusta" title="Permanent link">&para;</a></h3>
+<p><strong>Función sqli_check_3()</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="x">function sqli_check_3($link, $data)</span>
+<span class="x">{</span>
+<span class="x">    return mysqli_real_escape_string($link, $data);</span>
+<span class="x">}</span>
+</code></pre></div>
+
+<p><img alt="bWAPPSQL 3" src="../imagenes/apartado_dos/bwappsql19.png" /></p>
+<p>En este nivel se utiliza mysqli_real_escape_string(), que escapa correctamente los caracteres especiales utilizando una conexión activa a la base de datos.<br />
+Este método ofrece una protección más robusta frente a ataques de SQL Injection que los niveles anteriores, aunque la consulta sigue siendo construida dinámicamente.   </p>
+<hr />
+<h3 id="2610-nivel-de-seguridad-4-proteccion-adicional">2.6.10 Nivel de seguridad 4 – Protección adicional<a class="headerlink" href="#2610-nivel-de-seguridad-4-proteccion-adicional" title="Permanent link">&para;</a></h3>
+<p><strong>Función sqli_check_4()</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="x">function sqli_check_4($data)</span>
+<span class="x">{</span>
+<span class="x">    $input = str_replace(&quot;&#39;&quot;, &quot;&#39;&#39;&quot;, $data);</span>
+<span class="x">    return $input;</span>
+<span class="x">}</span>
+</code></pre></div>
+
+<p><img alt="bWAPPSQL 3" src="../imagenes/apartado_dos/bwappsql20.png" /></p>
+<p>En este nivel se realiza un reemplazo manual de las comillas simples, duplicándolas para evitar que alteren la sintaxis SQL.<br />
+Tal y como indica el propio comentario del código (Not bulletproof), este método no ofrece una protección completa y puede ser insuficiente frente a ataques más avanzados.  </p>
+<h3 id="2611-conclusion-y-enlaces-a-archivos-analizados">2.6.11 Conclusión y enlaces a archivos analizados<a class="headerlink" href="#2611-conclusion-y-enlaces-a-archivos-analizados" title="Permanent link">&para;</a></h3>
+<p>El análisis del código muestra cómo bWAPP implementa distintos mecanismos de filtrado del input en función del nivel de seguridad configurado.<br />
+A medida que aumenta el nivel de seguridad, se aplican técnicas más robustas para escapar caracteres especiales. Sin embargo, en todos los casos la consulta SQL se construye dinámicamente, por lo que la medida más segura frente a SQL Injection sería el uso de consultas preparadas (prepared statements).  </p>
+<p><strong>sqli_1.php</strong></p>
+<blockquote>
+<p><a href="https://github.com/JBLeopard/Unidad2-TareaRA2-Joaquin/blob/main/docs/sqli_1.php">sqli_1.php</a></p>
+</blockquote>
+<p><strong>functions_external.php</strong></p>
+<blockquote>
+<p><a href="https://github.com/JBLeopard/Unidad2-TareaRA2-Joaquin/blob/main/docs/functions_external.php">functions_external.php</a></p>
+</blockquote>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
