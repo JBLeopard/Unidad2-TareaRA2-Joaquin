@@ -158,7 +158,7 @@ Copio el hash de la clave y lo identifico en https://duckduckgo.com/.
 
 ![bWAPPSQL 12](./imagenes/apartado_dos/bwappsql12.png)
 
-Por último, uso yn escifrador online sha1: https://sha1.gromweb.com/, la clave de ambos usuarios es **bug**.
+Por último, uso un descifrador online sha1: https://sha1.gromweb.com/, la clave de ambos usuarios es **bug**.
 
 ![bWAPPSQL 12](./imagenes/apartado_dos/bwappsql13.png)
 
