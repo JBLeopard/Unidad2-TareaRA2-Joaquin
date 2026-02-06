@@ -336,9 +336,17 @@ function sqli_check_4($data)
 En este nivel se realiza un reemplazo manual de las comillas simples, duplicándolas para evitar que alteren la sintaxis SQL.  
 Tal y como indica el propio comentario del código (Not bulletproof), este método no ofrece una protección completa y puede ser insuficiente frente a ataques más avanzados.  
 
-### 2.6.11 Conclusión
+### 2.6.11 Conclusión y enlaces a archivos analizados
 
 El análisis del código muestra cómo bWAPP implementa distintos mecanismos de filtrado del input en función del nivel de seguridad configurado.  
 A medida que aumenta el nivel de seguridad, se aplican técnicas más robustas para escapar caracteres especiales. Sin embargo, en todos los casos la consulta SQL se construye dinámicamente, por lo que la medida más segura frente a SQL Injection sería el uso de consultas preparadas (prepared statements).  
+
+**sqli_1.php**
+
+> [sqli_1.php](https://github.com/JBLeopard/Unidad2-TareaRA2-Joaquin/blob/main/docs/sqli_1.php)
+
+**functions_external.php**
+
+> [functions_external.php](https://github.com/JBLeopard/Unidad2-TareaRA2-Joaquin/blob/main/docs/functions_external.php)
 
 ---
