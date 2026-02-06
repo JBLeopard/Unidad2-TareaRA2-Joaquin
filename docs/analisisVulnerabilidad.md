@@ -242,53 +242,75 @@ Esto provoca que la aplicación sea completamente vulnerable a ataques de SQL In
 
 ### 2.6.7 Nivel de seguridad 1 – Protección débil
 
+#### Función `sqli_check_1()`
+
 ```php
-Función sqli_check_1()
 function sqli_check_1($data)
 {
-    $data = mysqli_real_escape_string($GLOBALS["link"], $data);
-    return $data;
+    return addslashes($data);
 }
-```
+´´´
 
-En este nivel se utiliza la función mysqli_real_escape_string(), que escapa caracteres especiales como ', ", \, evitando que alteren directamente la consulta SQL.  
-Este filtrado dificulta ataques básicos de SQL Injection.  
-No obstante, la consulta sigue construyéndose dinámicamente mediante concatenación de cadenas y no se utilizan consultas preparadas, por lo que la protección no es completa.  
+En este nivel se utiliza la función addslashes(), que añade barras invertidas delante de caracteres especiales como:
 
----
+comilla simple (')
 
-### 2.6.8 Nivel de seguridad 2 – Protección más robusta
+comilla doble (")
 
-```php
+barra invertida (\)
+
+Este filtrado dificulta ataques básicos de SQL Injection, ya que evita que las comillas rompan directamente la consulta SQL.
+
+No obstante, este método no es seguro frente a todos los escenarios y no se considera una protección adecuada en aplicaciones reales.
+
+2.6.8 Nivel de seguridad 2 – Protección intermedia
 Función sqli_check_2()
 function sqli_check_2($data)
 {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = mysqli_real_escape_string($GLOBALS["link"], $data);
-    return $data;
+    return mysql_real_escape_string($data);
 }
-```
 
-En este nivel se aplican varias capas de filtrado al input del usuario:  
 
-trim() elimina espacios en blanco innecesarios  
+En este nivel se emplea la función mysql_real_escape_string(), que escapa los caracteres especiales teniendo en cuenta el contexto de la base de datos MySQL.
 
-stripslashes() elimina barras invertidas  
+Este enfoque ofrece una protección superior a addslashes(), aunque presenta las siguientes limitaciones:
 
-mysqli_real_escape_string() escapa caracteres especiales peligrosos  
+Depende de la extensión mysql, actualmente obsoleta
 
-Este tratamiento reduce considerablemente la posibilidad de que el input del usuario modifique la estructura de la consulta SQL.
-Aun así, la medida más segura frente a SQL Injection sería el uso de consultas preparadas (prepared statements).
+No utiliza consultas preparadas
+
+La consulta SQL sigue construyéndose mediante concatenación
+
+2.6.9 Nivel de seguridad 3 – Protección más robusta
+Función sqli_check_3()
+function sqli_check_3($link, $data)
+{
+    return mysqli_real_escape_string($link, $data);
+}
+
+
+En este nivel se utiliza mysqli_real_escape_string(), que escapa correctamente los caracteres especiales utilizando una conexión activa a la base de datos.
+
+Este método ofrece una protección más robusta frente a ataques de SQL Injection que los niveles anteriores, aunque la consulta sigue siendo construida dinámicamente.
+
+2.6.10 Nivel de seguridad 4 – Protección adicional
+Función sqli_check_4()
+function sqli_check_4($data)
+{
+    $input = str_replace("'", "''", $data);
+    return $input;
+}
+
+
+En este nivel se realiza un reemplazo manual de las comillas simples, duplicándolas para evitar que alteren la sintaxis SQL.
+
+Tal y como indica el propio comentario del código (Not bulletproof), este método no ofrece una protección completa y puede ser insuficiente frente a ataques más avanzados.
+
+2.6.11 Conclusión
+
+El análisis del código muestra cómo bWAPP implementa distintos mecanismos de filtrado del input en función del nivel de seguridad configurado.
+
+A medida que aumenta el nivel de seguridad, se aplican técnicas más robustas para escapar caracteres especiales. Sin embargo, en todos los casos la consulta SQL se construye dinámicamente, por lo que la medida más segura frente a SQL Injection sería el uso de consultas preparadas (prepared statements).
+
 
 ---
-
-### 2.6.9 Conclusión
-
-La vulnerabilidad analizada no reside en la base de datos, sino en la forma en la que el código PHP construye dinámicamente las consultas SQL utilizando datos introducidos por el usuario.
-
-Dependiendo del nivel de seguridad configurado en bWAPP, el input es tratado de manera distinta, lo que permite observar claramente la diferencia entre una aplicación vulnerable y una aplicación con mecanismos básicos de protección frente a SQL Injection.
-
-
----
-
