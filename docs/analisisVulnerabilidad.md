@@ -232,8 +232,9 @@ Las funciones encargadas del filtrado se encuentran definidas en el archivo:
 
 ### 2.6.6 Nivel de seguridad 0 – Vulnerable
 
+**Función no_check()**  
+
 ```php
-Función no_check()
 function no_check($data)
 {
     return $data;
@@ -251,7 +252,7 @@ Esto provoca que la aplicación sea completamente vulnerable a ataques de SQL In
 
 ### 2.6.7 Nivel de seguridad 1 – Protección débil
 
-#### Función `sqli_check_1()`
+**Función sqli_check_1()** 
 
 ```php
 function sqli_check_1($data)
@@ -260,26 +261,27 @@ function sqli_check_1($data)
 }
 ```
 
+---
+
 ![bWAPPSQL 3](./imagenes/apartado_dos/bwappsql17.png)
 
 
 En este nivel se utiliza la función addslashes(), que añade barras invertidas delante de caracteres especiales como:
 
-comilla simple (')
+- comilla simple (')  
+- comilla doble (")  
+- barra invertida (\)  
 
-comilla doble (")
+Este filtrado dificulta ataques básicos de SQL Injection, ya que evita que las comillas rompan directamente la consulta SQL.  
+No obstante, este método no es seguro frente a todos los escenarios y no se considera una protección adecuada en aplicaciones reales.  
 
-barra invertida (\)
-
-Este filtrado dificulta ataques básicos de SQL Injection, ya que evita que las comillas rompan directamente la consulta SQL.
-
-No obstante, este método no es seguro frente a todos los escenarios y no se considera una protección adecuada en aplicaciones reales.
-
+---
 
 ### 2.6.8 Nivel de seguridad 2 – Protección intermedia
 
+**Función sqli_check_2()**  
+
 ```php
-Función sqli_check_2()
 function sqli_check_2($data)
 {
     return mysql_real_escape_string($data);
@@ -289,20 +291,20 @@ function sqli_check_2($data)
 ![bWAPPSQL 3](./imagenes/apartado_dos/bwappsql18.png)
 
 
-En este nivel se emplea la función mysql_real_escape_string(), que escapa los caracteres especiales teniendo en cuenta el contexto de la base de datos MySQL.
+En este nivel se emplea la función mysql_real_escape_string(), que escapa los caracteres especiales teniendo en cuenta el contexto de la base de datos MySQL.  
+Este enfoque ofrece una protección superior a addslashes(), aunque presenta las siguientes limitaciones:  
 
-Este enfoque ofrece una protección superior a addslashes(), aunque presenta las siguientes limitaciones:
+- Depende de la extensión mysql, actualmente obsoleta
+- No utiliza consultas preparadas  
+- La consulta SQL sigue construyéndose mediante concatenación
 
-Depende de la extensión mysql, actualmente obsoleta
-
-No utiliza consultas preparadas
-
-La consulta SQL sigue construyéndose mediante concatenación
+---
 
 ### 2.6.9 Nivel de seguridad 3 – Protección más robusta
 
+**Función sqli_check_3()**
+
 ```php
-Función sqli_check_3()
 function sqli_check_3($link, $data)
 {
     return mysqli_real_escape_string($link, $data);
@@ -312,14 +314,14 @@ function sqli_check_3($link, $data)
 ![bWAPPSQL 3](./imagenes/apartado_dos/bwappsql19.png)
 
 
-En este nivel se utiliza mysqli_real_escape_string(), que escapa correctamente los caracteres especiales utilizando una conexión activa a la base de datos.
+En este nivel se utiliza mysqli_real_escape_string(), que escapa correctamente los caracteres especiales utilizando una conexión activa a la base de datos.  
+Este método ofrece una protección más robusta frente a ataques de SQL Injection que los niveles anteriores, aunque la consulta sigue siendo construida dinámicamente.  
 
-Este método ofrece una protección más robusta frente a ataques de SQL Injection que los niveles anteriores, aunque la consulta sigue siendo construida dinámicamente.
+---
 
 ### 2.6.10 Nivel de seguridad 4 – Protección adicional
 
-
-Función sqli_check_4()
+**Función sqli_check_4()**
 
 ```php
 function sqli_check_4($data)
@@ -331,15 +333,12 @@ function sqli_check_4($data)
 
 ![bWAPPSQL 3](./imagenes/apartado_dos/bwappsql20.png)
 
-En este nivel se realiza un reemplazo manual de las comillas simples, duplicándolas para evitar que alteren la sintaxis SQL.
-
-Tal y como indica el propio comentario del código (Not bulletproof), este método no ofrece una protección completa y puede ser insuficiente frente a ataques más avanzados.
+En este nivel se realiza un reemplazo manual de las comillas simples, duplicándolas para evitar que alteren la sintaxis SQL.  
+Tal y como indica el propio comentario del código (Not bulletproof), este método no ofrece una protección completa y puede ser insuficiente frente a ataques más avanzados.  
 
 ### 2.6.11 Conclusión
 
-El análisis del código muestra cómo bWAPP implementa distintos mecanismos de filtrado del input en función del nivel de seguridad configurado.
-
-A medida que aumenta el nivel de seguridad, se aplican técnicas más robustas para escapar caracteres especiales. Sin embargo, en todos los casos la consulta SQL se construye dinámicamente, por lo que la medida más segura frente a SQL Injection sería el uso de consultas preparadas (prepared statements).
-
+El análisis del código muestra cómo bWAPP implementa distintos mecanismos de filtrado del input en función del nivel de seguridad configurado.  
+A medida que aumenta el nivel de seguridad, se aplican técnicas más robustas para escapar caracteres especiales. Sin embargo, en todos los casos la consulta SQL se construye dinámicamente, por lo que la medida más segura frente a SQL Injection sería el uso de consultas preparadas (prepared statements).  
 
 ---
