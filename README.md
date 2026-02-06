@@ -27,7 +27,9 @@ Unidad2-TareaRA2-Joaquin/
 │   ├── TrazadoVulnerabilidadGoAnywhere.md
 │   ├── analisisVulnerabilidad.md
 │   ├── conclusiones.md
+│   ├── functions_external.php
 │   ├── index.md
+│   ├── sqli_1.php
 │   ├── imagenes
 │   │   ├── apartado_dos
 │   │   │   ├── bwapp1.png
@@ -46,6 +48,13 @@ Unidad2-TareaRA2-Joaquin/
 │   │   │   ├── bwappsql11.png
 │   │   │   ├── bwappsql12.png
 │   │   │   ├── bwappsql13.png
+│   │   │   ├── bwappsql14.png
+│   │   │   ├── bwappsql15.png
+│   │   │   ├── bwappsql16.png
+│   │   │   ├── bwappsql17.png
+│   │   │   ├── bwappsql18.png
+│   │   │   ├── bwappsql19.png
+│   │   │   ├── bwappsql20.png
 │   │   │   ├── dvwa1.png
 │   │   │   ├── dvwa2.png
 │   │   │   ├── kali.png
