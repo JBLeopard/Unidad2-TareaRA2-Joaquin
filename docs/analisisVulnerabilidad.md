@@ -82,7 +82,7 @@ En el primer acceso es necesario crear la base de datos desde la página de inst
 
 ---
  
-### 2.5 SQL Injection (GET/Search) en bWAPP
+### 2.5 SQL Injection (GET/Search) en bWAPP desde el punto de vista atacante
 
 
 ![bWAPPSQL 1](./imagenes/apartado_dos/bwappsql1.png)
@@ -163,3 +163,132 @@ Por último, uso un descifrador online sha1: https://sha1.gromweb.com/, la clave
 ![bWAPPSQL 12](./imagenes/apartado_dos/bwappsql13.png)
 
 ---
+
+## 2.6 SQL Injection (GET/Search) en bWAPP desde el punto de vista defensivo
+
+En este apartado se realiza un análisis del código vulnerable a SQL Injection desde el punto de vista defensivo, inspeccionando cómo la aplicación trata el input del usuario dependiendo del nivel de seguridad configurado en bWAPP.
+
+---
+
+### 2.6.1 Descripción de la funcionalidad
+
+La funcionalidad analizada corresponde a la búsqueda de películas mediante un formulario que envía el parámetro `title` por método GET.
+
+📸 *Captura de la página de búsqueda SQL Injection (GET/Search).*
+
+---
+
+### 2.6.2 Identificación del archivo vulnerable
+
+El archivo que implementa esta funcionalidad es: /var/www/html/sqli_1.php
+
+
+Este archivo recibe el valor introducido por el usuario y lo utiliza para construir una consulta SQL.
+
+📸 *Captura del archivo `sqli_1.php`.*
+
+---
+
+### 2.6.3 Inspección del código fuente
+
+Accedemos al contenedor bWAPP y mostramos el contenido del archivo con numeración de líneas para facilitar su análisis:
+
+```bash
+docker exec -it bwapp /bin/bash
+cat -n /var/www/html/sqli_1.php
+```
+
+---
+
+### 2.6.4 Análisis del tratamiento del input
+
+En el archivo sqli_1.php se encuentra el siguiente fragmento de código:
+
+```php
+$title = $_GET["title"];
+$sql = "SELECT * FROM movies WHERE title LIKE '%$title%'";
+```
+
+El valor introducido por el usuario se concatena directamente dentro de la consulta SQL, lo que implica que el input pasa a formar parte de la estructura de la consulta sin validación previa.
+
+---
+
+### 2.6.5 Funciones de filtrado según el nivel de seguridad
+
+El tratamiento del input depende del valor de la cookie security_level.
+Las funciones encargadas del filtrado se encuentran definidas en el archivo:
+
+```bash
+/var/www/html/functions_external.php
+```
+
+---
+
+### 2.6.6 Nivel de seguridad 0 – Vulnerable
+
+```php
+Función no_check()
+function no_check($data)
+{
+    return $data;
+}
+```
+
+En este nivel, la función devuelve directamente el input del usuario sin aplicar ningún tipo de validación, filtrado ni escape de caracteres especiales.  
+Como consecuencia, caracteres como la comilla simple (') se interpretan como parte de la sintaxis SQL, permitiendo modificar la consulta original.  
+Esto provoca que la aplicación sea completamente vulnerable a ataques de SQL Injection.  
+
+---
+
+### 2.6.7 Nivel de seguridad 1 – Protección débil
+
+```php
+Función sqli_check_1()
+function sqli_check_1($data)
+{
+    $data = mysqli_real_escape_string($GLOBALS["link"], $data);
+    return $data;
+}
+```
+
+En este nivel se utiliza la función mysqli_real_escape_string(), que escapa caracteres especiales como ', ", \, evitando que alteren directamente la consulta SQL.  
+Este filtrado dificulta ataques básicos de SQL Injection.  
+No obstante, la consulta sigue construyéndose dinámicamente mediante concatenación de cadenas y no se utilizan consultas preparadas, por lo que la protección no es completa.  
+
+---
+
+### 2.6.8 Nivel de seguridad 2 – Protección más robusta
+
+```php
+Función sqli_check_2()
+function sqli_check_2($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = mysqli_real_escape_string($GLOBALS["link"], $data);
+    return $data;
+}
+```
+
+En este nivel se aplican varias capas de filtrado al input del usuario:  
+
+trim() elimina espacios en blanco innecesarios  
+
+stripslashes() elimina barras invertidas  
+
+mysqli_real_escape_string() escapa caracteres especiales peligrosos  
+
+Este tratamiento reduce considerablemente la posibilidad de que el input del usuario modifique la estructura de la consulta SQL.
+Aun así, la medida más segura frente a SQL Injection sería el uso de consultas preparadas (prepared statements).
+
+---
+
+### 2.6.9 Conclusión
+
+La vulnerabilidad analizada no reside en la base de datos, sino en la forma en la que el código PHP construye dinámicamente las consultas SQL utilizando datos introducidos por el usuario.
+
+Dependiendo del nivel de seguridad configurado en bWAPP, el input es tratado de manera distinta, lo que permite observar claramente la diferencia entre una aplicación vulnerable y una aplicación con mecanismos básicos de protección frente a SQL Injection.
+
+
+---
+
