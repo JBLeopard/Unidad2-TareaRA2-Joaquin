@@ -174,18 +174,18 @@ En este apartado se realiza un análisis del código vulnerable a SQL Injection 
 
 La funcionalidad analizada corresponde a la búsqueda de películas mediante un formulario que envía el parámetro `title` por método GET.
 
-📸 *Captura de la página de búsqueda SQL Injection (GET/Search).*
+![bWAPPSQL 1](./imagenes/apartado_dos/bwappsql1.png)
 
 ---
 
 ### 2.6.2 Identificación del archivo vulnerable
 
-El archivo que implementa esta funcionalidad es: /var/www/html/sqli_1.php
+El archivo que implementa esta funcionalidad es: ```/var/www/html/sqli_1.php```
 
 
 Este archivo recibe el valor introducido por el usuario y lo utiliza para construir una consulta SQL.
 
-📸 *Captura del archivo `sqli_1.php`.*
+![bWAPPSQL 3](./imagenes/apartado_dos/bwappsql3.png)
 
 ---
 
@@ -198,6 +198,8 @@ docker exec -it bwapp /bin/bash
 cat -n /var/www/html/sqli_1.php
 ```
 
+![bWAPPSQL 3](./imagenes/apartado_dos/bwappsql14.png)
+
 ---
 
 ### 2.6.4 Análisis del tratamiento del input
@@ -208,6 +210,8 @@ En el archivo sqli_1.php se encuentra el siguiente fragmento de código:
 $title = $_GET["title"];
 $sql = "SELECT * FROM movies WHERE title LIKE '%$title%'";
 ```
+
+![bWAPPSQL 3](./imagenes/apartado_dos/bwappsql15.png)
 
 El valor introducido por el usuario se concatena directamente dentro de la consulta SQL, lo que implica que el input pasa a formar parte de la estructura de la consulta sin validación previa.
 
@@ -222,6 +226,8 @@ Las funciones encargadas del filtrado se encuentran definidas en el archivo:
 /var/www/html/functions_external.php
 ```
 
+![bWAPPSQL 3](./imagenes/apartado_dos/bwappsql15.png)
+
 ---
 
 ### 2.6.6 Nivel de seguridad 0 – Vulnerable
@@ -233,6 +239,9 @@ function no_check($data)
     return $data;
 }
 ```
+
+![bWAPPSQL 3](./imagenes/apartado_dos/bwappsql16.png)
+
 
 En este nivel, la función devuelve directamente el input del usuario sin aplicar ningún tipo de validación, filtrado ni escape de caracteres especiales.  
 Como consecuencia, caracteres como la comilla simple (') se interpretan como parte de la sintaxis SQL, permitiendo modificar la consulta original.  
@@ -249,7 +258,10 @@ function sqli_check_1($data)
 {
     return addslashes($data);
 }
-´´´
+```
+
+![bWAPPSQL 3](./imagenes/apartado_dos/bwappsql17.png)
+
 
 En este nivel se utiliza la función addslashes(), que añade barras invertidas delante de caracteres especiales como:
 
@@ -263,12 +275,18 @@ Este filtrado dificulta ataques básicos de SQL Injection, ya que evita que las 
 
 No obstante, este método no es seguro frente a todos los escenarios y no se considera una protección adecuada en aplicaciones reales.
 
-2.6.8 Nivel de seguridad 2 – Protección intermedia
+
+### 2.6.8 Nivel de seguridad 2 – Protección intermedia
+
+```php
 Función sqli_check_2()
 function sqli_check_2($data)
 {
     return mysql_real_escape_string($data);
 }
+```
+
+![bWAPPSQL 3](./imagenes/apartado_dos/bwappsql18.png)
 
 
 En este nivel se emplea la función mysql_real_escape_string(), que escapa los caracteres especiales teniendo en cuenta el contexto de la base de datos MySQL.
@@ -281,32 +299,43 @@ No utiliza consultas preparadas
 
 La consulta SQL sigue construyéndose mediante concatenación
 
-2.6.9 Nivel de seguridad 3 – Protección más robusta
+### 2.6.9 Nivel de seguridad 3 – Protección más robusta
+
+```php
 Función sqli_check_3()
 function sqli_check_3($link, $data)
 {
     return mysqli_real_escape_string($link, $data);
 }
+```
+
+![bWAPPSQL 3](./imagenes/apartado_dos/bwappsql19.png)
 
 
 En este nivel se utiliza mysqli_real_escape_string(), que escapa correctamente los caracteres especiales utilizando una conexión activa a la base de datos.
 
 Este método ofrece una protección más robusta frente a ataques de SQL Injection que los niveles anteriores, aunque la consulta sigue siendo construida dinámicamente.
 
-2.6.10 Nivel de seguridad 4 – Protección adicional
+### 2.6.10 Nivel de seguridad 4 – Protección adicional
+
+
 Función sqli_check_4()
+
+```php
 function sqli_check_4($data)
 {
     $input = str_replace("'", "''", $data);
     return $input;
 }
+```
 
+![bWAPPSQL 3](./imagenes/apartado_dos/bwappsql20.png)
 
 En este nivel se realiza un reemplazo manual de las comillas simples, duplicándolas para evitar que alteren la sintaxis SQL.
 
 Tal y como indica el propio comentario del código (Not bulletproof), este método no ofrece una protección completa y puede ser insuficiente frente a ataques más avanzados.
 
-2.6.11 Conclusión
+### 2.6.11 Conclusión
 
 El análisis del código muestra cómo bWAPP implementa distintos mecanismos de filtrado del input en función del nivel de seguridad configurado.
 
